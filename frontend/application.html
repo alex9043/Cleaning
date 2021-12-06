@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Клининг </title>
+
+    <!-- noUiSlider -->
+    <link rel="stylesheet" href="css/nouislider.min.css">
+
+    <!-- Swiper's CSS -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+
+    <!-- Календарь CSS -->
+    <link rel="stylesheet" href="css/calendar.css">
+
+    <!-- style -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header-burger">
+                <span></span>
+            </div>
+            <div class="header-button-container">
+                <div class="header-button">
+                    <a href="index.html">Главная</a>
+                </div>
+                <div class="header-button  active_button">
+                    <a href="application.html">Заказ</a>
+                </div>
+            </div>
+            <div class="header-logo">
+                <a href="index.html">
+                    <img src="img/логотип 2.png" alt="">
+                </a>
+                <a href="index.html">
+                    <span>Петербургский клининг</span>
+                </a>
+            </div>
+            <div class="header-button-container">
+                <div class="header-button">
+                    <a href="services.html">Услуги</a>
+                </div>
+                <div class="header-button">
+                    <a href="about.html">О нас</a>
+                </div>
+            </div>
+            <div class="dropdown-content dropdown_user">  
+                <a class="dropdown-element" href="index.html">Главная</a>
+                <a class="dropdown-element" href="services.html">Услуги</a>
+                <a class="dropdown-element" href="application.html">Заказы</a>
+                <a class="dropdown-element-mobile modal_button" data-path="modal_call" href="#">Обратный звонок</a>
+                <a class="dropdown-element-mobile modal_button" data-path="modal_price_path" href="#">Расчет стоимости</a>
+                <a class="dropdown-element" href="about.html">О нас</a>
+            </div>
+        </header>
+
+        <main>
+            <div class="slider-button-conteiner">
+                <div class="slider-button-prev">
+                    <img src="img/иконки 11стрелка_прев.png" alt="">
+                </div>
+                <div class="slider-button-next">
+                    <img src="img/иконки 10_стрелка_след.png" alt="">
+                </div>
+            </div>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="slide-elipse">
+                            <div class="slide-elipse-number">
+                                1
+                            </div>
+                        </div>
+                        <div class="slide-title">
+                            Выберите уборку
+                        </div>
+                        <div class="slide-choose_cleaning-conteiner">
+                            <div class="slide-choose_cleaning-content">
+                                <div class="slide-choose_cleaning-content-block">
+                                    <div id="choose_cleaning-1" class="slide-choose_cleaning-content-image">
+                                        <img src="img/подд_слайд_1.png" alt="">
+                                    </div>
+                                    <div class="slide-choose_cleaning-content-name">
+                                        Поддерживающая
+                                    </div>
+                                    <div class="slide-choose_cleaning-content-min_image">
+                                        <img src="img/Поддержка_слайд_1.png" alt="">
+                                    </div>
+                                    <div class="slide-choose_cleaning-content-text">
+                                        60 р/м<sup>2</sup>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide-choose_cleaning-content">
+                                <div class="slide-choose_cleaning-content-block">
+                                    <div id="choose_cleaning-2" class="slide-choose_cleaning-content-image">
+                                        <img src="img/станд_слайд_1.png" alt="">
+                                    </div>
+                                    <div class="slide-choose_cleaning-content-name">
+                                        Стандартная
+                                    </div>
+                                    <div class="slide-choose_cleaning-content-min_image reverse-image">
+                                        <img src="img/Стандарт_исконка.svg" alt="">
+                                    </div>
+                                    <div class="slide-choose_cleaning-content-text">
+                                        75 р/м<sup>2</sup>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide-choose_cleaning-content">
+                                <div class="slide-choose_cleaning-content-block">
+                                    <div id="choose_cleaning-3" class="slide-choose_cleaning-content-image">
+                                        <img src="img/ген_слайд_1.png" alt="">
+                                    </div>
+                                    <div class="slide-choose_cleaning-content-name">
+                                        Генеральная
+                                    </div>
+                                    <div class="slide-choose_cleaning-content-min_image">
+                                        <img src="img/Генералка_иконка.svg" alt="">
+                                    </div>
+                                    <div class="slide-choose_cleaning-content-text">
+                                        125 р/м<sup>2</sup>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide-choose_cleaning-content">
+                                <div class="slide-choose_cleaning-content-block">
+                                    <div id="choose_cleaning-4" class="slide-choose_cleaning-content-image">
+                                        <img src="img/послестрой_слайд_1.png" alt="">
+                                    </div>
+                                    <div class="slide-choose_cleaning-content-name">
+                                        Послестроительная
+                                    </div>
+                                    <div class="slide-choose_cleaning-content-min_image">
+                                        <img src="img/Послестрой_иконка.png" alt="">
+                                    </div>
+                                    <div class="slide-choose_cleaning-content-text">
+                                        140 р/м<sup>2</sup>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide-choose_cleaning-content">
+                                <div class="slide-choose_cleaning-content-block">
+                                    <div id="choose_cleaning-5" class="slide-choose_cleaning-content-image">
+                                        <img src="img/окно_слайд_1.png" alt="">
+                                    </div>
+                                    <div class="slide-choose_cleaning-content-name">
+                                        Мойка окон
+                                    </div>
+                                    <div class="slide-choose_cleaning-content-min_image">
+                                        <img src="img/окно_иконка.png" alt="">
+                                    </div>
+                                    <div class="slide-choose_cleaning-content-text">
+                                        250 р/створка
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide-elipse">
+                            <div class="slide-elipse-number">
+                                2
+                            </div>
+                        </div>
+                        <div class="slide-title">
+                            Укажите площадь <br> квартиры или дома
+                        </div>
+                        <div class="slide-input-conteiner-square">
+                            <input type="text" class="slide-input-square" placeholder="75">
+                            <span>м<sup>2</sup></span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide-elipse">
+                            <div class="slide-elipse-number">
+                                3
+                            </div>
+                        </div>
+                        <div class="slide-title">
+                            Выберите дополнительные <br> услуги
+                        </div>
+                        <div class="slide-services-conteiner">
+                            <div class="slide-services-content">
+                                <div class="slide-services-content-image">
+                                    <img class="slide-services-content-image-full" src="img/Холодильник.png" alt="">
+                                    <img class="slide-services-content-image-middle" src="img/Холодильник_мин.png" alt="">
+                                </div>
+                                <p class="slide-services-content-price">250 р.</p>
+                                <p class="slide-services-content-name">Холодильник</p>
+                                <div class="slide-services-content-help">
+                                    ?
+                                </div>
+                                <div class="slide-services-content-help-block">
+                                    <img src="img/стрелочка.svg" alt="">
+                                    <p>
+                                        Помоем холодильник внутри и снаружи. Если нужно помыть морозильную камеру, пожалуйста, разморозте её заранее.
+                                    </p>
+                                </div>
+                                <div class="services-counter">
+                                    <div class="services-counter-button-prev"></div>
+                                    <div class="services-counter-count"> x<span class="services-counter-count-per">1</span></div>
+                                    <div class="services-counter-button-next"></div>
+                                </div>
+                            </div>
+                            <div class="slide-services-content">
+                                <div class="slide-services-content-image">
+                                    <img class="slide-services-content-image-full" src="img/Вытяжка.png" alt="">
+                                    <img class="slide-services-content-image-middle" src="img/Вытяжка_midle.png" alt="">
+                                </div>
+                                <p class="slide-services-content-price">300 р.</p>
+                                <p class="slide-services-content-name">Вытяжка</p>
+                                <div class="slide-services-content-help position_help">
+                                    ?
+                                </div>
+                                <div class="slide-services-content-help-block position_help">
+                                    <img src="img/стрелочка.svg" alt="">
+                                    <p>
+                                        Помоем фильтры и вытяжку внутри и снаружи.
+                                    </p>
+                                </div>
+                                <div class="services-counter">
+                                    <div class="services-counter-button-prev"></div>
+                                    <div class="services-counter-count"> x<span class="services-counter-count-per">1</span></div>
+                                    <div class="services-counter-button-next"></div>
+                                </div>
+                            </div>
+                            <div class="slide-services-content">
+                                <div class="slide-services-content-image">
+                                    <img class="slide-services-content-image-full" src="img/Микроволновка.png" alt="">
+                                    <img class="slide-services-content-image-middle" src="img/Микроволновка_midle.png" alt="">
+                                </div>
+                                <div class="slide-services-content-info">
+                                    <p class="slide-services-content-price">250 р.</p>
+                                    <p class="slide-services-content-name">Микроволновка</p>
+                                </div>
+                                <div class="slide-services-content-help">
+                                    ?
+                                </div>
+                                <div class="slide-services-content-help-block">
+                                    <img src="img/стрелочка.svg" alt="">
+                                    <p>
+                                        Помоем микроволновку внутри и снаружи
+                                    </p>
+                                </div>
+                                <div class="services-counter">
+                                    <div class="services-counter-button-prev"></div>
+                                    <div class="services-counter-count"> x<span class="services-counter-count-per">1</span></div>
+                                    <div class="services-counter-button-next"></div>
+                                </div>
+                            </div>
+                            <div class="slide-services-content">
+                                <div class="slide-services-content-image">
+                                    <img class="slide-services-content-image-full" src="img/Шкафчик.png" alt="">
+                                    <img class="slide-services-content-image-middle" src="img/Шкафчик_midle.png" alt="">
+                                </div>
+                                <div class="slide-services-content-info">
+                                    <p class="slide-services-content-price">350 р.</p>
+                                    <p class="slide-services-content-name fz-25">
+                                        Внутри кухонных шкафчиков
+                                    </p>
+                                </div>
+                                <div class="slide-services-content-help position_help">
+                                    ?
+                                </div>
+                                <div class="slide-services-content-help-block position_help">
+                                    <img src="img/стрелочка.svg" alt="">
+                                    <p>
+                                        Пожалуйста, заранее освободите шкафчики. Мы можем сделать это самостоятельно, за почасовую отплау
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="slide-services-content">
+                                <div class="slide-services-content-image">
+                                    <img class="slide-services-content-image-full" src="img/Окно.png" alt="">
+                                    <img class="slide-services-content-image-middle" src="img/Окно_midle.png" alt="">
+                                </div>
+                                <div class="slide-services-content-info">
+                                    <p class="slide-services-content-price">250 р./створка</p>
+                                    <p class="slide-services-content-name">Окна</p>
+                                </div>
+                                <div class="slide-services-content-help">
+                                    ?
+                                </div>
+                                <div class="slide-services-content-help-block">
+                                    <img src="img/стрелочка.svg" alt="">
+                                    <p>
+                                        Помоем до блеска любые окна!
+                                    </p>
+                                </div>
+                                <div class="services-counter services-counter-window">
+                                    <div class="services-counter-button-prev"></div>
+                                    <div class="services-counter-count"><span class="services-counter-count-per">10</span><br>створок</div>
+                                    <div class="services-counter-button-next"></div>
+                                </div>
+                            </div>
+                            <div class="slide-services-content">
+                                <div class="slide-services-content-image">
+                                    <img class="slide-services-content-image-full" src="img/утюг.png" alt="">
+                                    <img class="slide-services-content-image-middle" src="img/утюг_midle.png" alt="">
+                                </div>
+                                <div class="slide-services-content-info">
+                                    <p class="slide-services-content-price">250 р./час</p>
+                                    <p class="slide-services-content-name">Глажка</p>
+                                </div>
+                                <div class="slide-services-content-help position_help">
+                                    ?
+                                </div>
+                                <div class="slide-services-content-help-block position_help">
+                                    <img src="img/стрелочка.svg" alt="">
+                                    <span>
+                                        Примерное количество белья, которое мы гладим за час: <br>
+                                        рубашка - 6-7/<br>
+                                        брюки - 8-10/<br>
+                                        платья - 8-10/<br>
+                                        др. вещи - 13-15/<br>
+                                        комплект двуспального постельного белья - 25-30 мин.
+                                    </span>
+                                </div>
+                                <div class="services-counter">
+                                    <div class="services-counter-button-prev"></div>
+                                    <div class="services-counter-count"> <span class="services-counter-count-per">1</span> час</div>
+                                    <div class="services-counter-button-next"></div>
+                                </div>
+                            </div>
+                            <div class="slide-services-content">
+                                <div class="slide-services-content-image">
+                                    <img class="slide-services-content-image-full" src="img/Стиралка.png" alt="">
+                                    <img class="slide-services-content-image-middle" src="img/Стиралка_midle.png" alt="">
+                                </div>
+                                <div class="slide-services-content-info">
+                                    <p class="slide-services-content-price">150 р./загрузка</p>
+                                    <p class="slide-services-content-name">Стирка</p>
+                                </div>
+                                <div class="slide-services-content-help">
+                                    ?
+                                </div>
+                                <div class="slide-services-content-help-block">
+                                    <img src="img/стрелочка.svg" alt="">
+                                    <p>
+                                        С удовольствием загрузим стиральную машину и развесим вещи на сушилку
+                                    </p>
+                                </div>
+                                <div class="services-counter">
+                                    <div class="services-counter-button-prev"></div>
+                                    <div class="services-counter-count"> x<span class="services-counter-count-per">1</span></div>
+                                    <div class="services-counter-button-next"></div>
+                                </div>
+                            </div>
+                            <div class="slide-services-content">
+                                <div class="slide-services-content-image">
+                                    <img class="slide-services-content-image-full" src="img/Плита.png" alt="">
+                                    <img class="slide-services-content-image-middle" src="img/Плита_midle.png" alt="">
+                                </div>
+                                <div class="slide-services-content-info">
+                                    <p class="slide-services-content-price">450 р.</p>
+                                    <p class="slide-services-content-name">Духовка</p>
+                                </div>
+                                <div class="slide-services-content-help position_help">
+                                    ?
+                                </div>
+                                <div class="slide-services-content-help-block position_help">
+                                    <img src="img/стрелочка.svg" alt="">
+                                    <p>
+                                        Отмоем духовку внутри и снаружи
+                                    </p>
+                                </div>
+                                <div class="services-counter">
+                                    <div class="services-counter-button-prev"></div>
+                                    <div class="services-counter-count"> x<span class="services-counter-count-per">1</span></div>
+                                    <div class="services-counter-button-next"></div>
+                                </div>
+                            </div>
+                            <div class="slide-services-content">
+                                <div class="slide-services-content-image">
+                                    <img class="slide-services-content-image-full" src="img/Книга.png" alt="">
+                                    <img class="slide-services-content-image-middle" src="img/Книга_midle.png" alt="">
+                                </div>
+                                <div class="slide-services-content-info">
+                                    <p class="slide-services-content-price">600 р./час</p>
+                                    <p class="slide-services-content-name fz-25">
+                                        Доп. поручения
+                                    </p>
+                                </div>
+                                <div class="slide-services-content-help">
+                                    ?
+                                </div>
+                                <div class="slide-services-content-help-block">
+                                    <img src="img/стрелочка.svg" alt="">
+                                    <p>
+                                        Выполним любые задачи, не входящие в перечнь.
+                                    </p>
+                                </div>
+                                <div class="services-counter">  
+                                    <div class="services-counter-button-prev"></div>
+                                    <div class="services-counter-count"> <span class="services-counter-count-per">1</span> час</div>
+                                    <div class="services-counter-button-next"></div>
+                                </div>
+                            </div>
+                            <div class="slide-services-content">
+                                <div class="slide-services-content-image">
+                                    <img class="slide-services-content-image-full" src="img/киска.png" alt="">
+                                    <img class="slide-services-content-image-middle" src="img/киска_midle.png" alt="">
+                                </div>
+                                <div class="slide-services-content-info">
+                                    <p class="slide-services-content-price">100 р.</p>
+                                    <p class="slide-services-content-name fz-23">Поменять наполнитель и помыть лоток</p>
+                                </div>
+                                <div class="slide-services-content-help position_help">
+                                    ?
+                                </div>
+                                <div class="slide-services-content-help-block position_help">
+                                    <img src="img/стрелочка.svg" alt="">
+                                    <p>
+                                        С заботой о Ваших любимых питомцах!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide no-scale">
+                        <div class="swiper-slide-flex">
+                            <div class="swiper-slide-stage_4">
+                                <div class="slide-elipse">
+                                    <div class="slide-elipse-number">
+                                        4
+                                    </div>
+                                </div>
+                                <div class="slide-title">
+                                    Выберите дату и время
+                                </div>
+
+                                <div class="calendar">
+                                    <div class="month">
+                                        <i class="prev">
+                                            <svg class="strelka-left-3" viewBox="0 0 5 9">
+                                                <path
+                                                    d="M0.419,9.000 L0.003,8.606 L4.164,4.500 L0.003,0.394 L0.419,0.000 L4.997,4.500 L0.419,9.000 Z">
+                                                </path>
+                                            </svg>
+                                        </i>
+                                        <div class="date">
+                                            <h1></h1>
+                                        </div>
+                                        <i class="next">
+                                            <svg class="strelka-right-3" viewBox="0 0 5 9">
+                                                <path
+                                                    d="M0.419,9.000 L0.003,8.606 L4.164,4.500 L0.003,0.394 L0.419,0.000 L4.997,4.500 L0.419,9.000 Z">
+                                                </path>
+                                            </svg>
+                                        </i>
+                                    </div>
+                                    <div class="weekdays">
+                                        <div>пн</div>
+                                        <div>вт</div>
+                                        <div>ср</div>
+                                        <div>чт</div>
+                                        <div>пт</div>
+                                        <div>сб</div>
+                                        <div>вс</div>
+                                    </div>
+                                    <div class="days"></div>
+                                </div>
+
+                                <div class="swiper-slide-stage_4-input-block">
+                                    <input type="time" value="12:00" class="swiper-slide-stage_4-input">
+                                </div>
+                            </div>
+
+
+                            <div class="swiper-slide-stage_5">
+                                <div class="slide-elipse">
+                                    <div class="slide-elipse-number">
+                                        5
+                                    </div>
+                                </div>
+                                <div class="slide-title">
+                                    Ваши контакты
+                                </div>
+                                <div class="swiper-slide-stage_5-content">
+                                    <input type="text" class="stage_5-content-input" placeholder="Имя">
+                                    <input type="text" class="stage_5-content-input" placeholder="Фамилия">
+                                    <input type="tel" class="stage_5-content-input" placeholder="Телефон">
+                                    <input type="email" class="stage_5-content-input" placeholder="Электронная почта">
+                                </div>
+                                <input type="text" class="swiper-slide-stage_5-input" placeholder="Адрес">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide no-scale">
+                        <div class="swiper-slide-flex">
+                            <div class="swiper-slide-stage_6">
+                                <div class="slide-elipse">
+                                    <div class="slide-elipse-number">
+                                        6
+                                    </div>
+                                </div>
+                                <div class="slide-title">
+                                    Ваш заказ:
+                                </div>
+                                <ul class="slide_information-conteiner">
+                                    <li class="slide_information-content slide_information-content-full">
+                                        <p>Генеральная уборка, 75 м<sup>2</sup></p>
+                                    </li>
+                                    <li class="slide_information-content">
+                                        <p>Холодильник, глажка <span class="italic">(1 час)</span>,</p>
+                                        <p>стирка <span class="italic">(2 загрузки)</span>,</p>
+                                        <p>доп. поручения <span class="italic">(1.5 часа)</span>,</p>
+                                        <p> окна <span class="italic">(10 ств-к)</span></p>
+                                    </li>
+                                    <li class="slide_information-content">
+                                        <p>20 августа в 09:00</p>
+                                    </li>
+                                    <li class="slide_information-content">
+                                        <p>
+                                            Дорога на Турухтанные острова, д. 100 кв. 1000
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="swiper-slide-stage_7">
+                                <div class="slide-elipse">
+                                    <div class="slide-elipse-number">
+                                        7
+                                    </div>
+                                </div>
+                                <div class="slide-title">
+                                    Способ оплаты
+                                </div>
+                                <ul class="slide_information-conteiner slide_information-conteiner-size-7">
+                                    <li class="slide_information-content slide_information-content-size">
+                                        <p>Наличные</p>
+                                    </li>
+                                    <li class="slide_information-content slide_information-content-size">
+                                        <p>Банковская карта</p>
+                                    </li>
+                                    <li class="slide_information-content slide_information-content-size">
+                                        <p>Эппл</p>
+                                    </li>
+                                    <li class="slide_information-content slide_information-content-size">
+                                        <p>
+                                            Гугл
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="swiper-slide-button">
+                            <button class="application-button">
+                                Оформить заказ
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="application-total">
+                    Итого: <span>9350</span> р.
+                </div>
+        </main>
+
+        <footer class="footer">
+            <p>
+                roman__turaev@mail.ru +7 (981) 935-83-73
+            </p>
+        </footer>
+    </div>
+    <div class="modals">
+        <div class="modals-overlay">
+            <div class="modal block_call" data-target="modal_call">
+                <div class="block_call-conteiner">
+                    <div class="block_call-left-image">
+                        <img src="img/metla.png" alt="">
+                    </div>
+                    <div class="block_call-input">
+                        <input class="block_call-input-element" type="text" placeholder="Имя">
+                        <input class="block_call-input-element" type="text" placeholder="Телефон">
+                    </div>
+                    <div class="block_call-right-image">
+                        <img src="img/metla.png" alt="">
+                    </div>
+                </div>
+                <div class="block_call-text">
+                    <input id="block_call_input" class="custom-checkbox" type="checkbox">
+                    <label for="block_call_input">
+                        <img class="custom-checkbox-active" src="img/Галочка.svg" alt="">
+                    </label>
+                    <span class="block_call-text-span">Я согласен с <a href="politics.html">политикой обработки персональных данных</a> </span>
+                </div>
+                <div class="block_call-button">
+                    <button>Отправить</button>
+                </div>
+            </div>
+            <div class="modal" data-target="modal_price_path">
+                <div class="modal_price">
+                    <h1 class="modal_price-sum">
+                        0 ₽
+                    </h1>
+                    <div class="modal_price-square">
+                        <span>Площаль, </span> 
+                        <input type="text" class="modal_price-square-input">
+                        <span>м</span> 
+                    </div>
+                    <div id="form">
+                        <div class="bar">
+                            <div id="m-slider"></div>
+                        </div>
+                    </div>
+
+                    <div class="modal-price-type_selection">
+                        <button>Стандартная</button>
+                        <button>Послестроительная</button>
+                        <button>Генеральная</button>
+                        <button>Мойка окон</button>
+                    </div>
+
+                    <div class="modal-price-add_services">
+                        <button>Холодильник</button>
+                        <button>Внутри кухонных шкафчиков</button>
+                        <button>Вытяжка </button>
+                        <button>
+                            <span class="add_services-text">Стирка</span> 
+                            <div class="add_services-counter">
+                                <div class="add_services-counter-prev"></div>
+                                <div class="add_services-counter-text">
+                                    <span class="add_services-counter-per">1</span>
+                                    загрузка
+                                </div>
+                                <div class="add_services-counter-next"></div>
+                            </div>
+                        </button>
+                        <button>Микроволновка</button>
+                        <button>
+                            <span class="add_services-text">Глажка</span> 
+                            <div class="add_services-counter">
+                                <div class="add_services-counter-prev"></div>
+                                <div class="add_services-counter-text">
+                                    <span class="add_services-counter-per">1</span>
+                                    час
+                                </div>
+                                <div class="add_services-counter-next"></div>
+                        </button>
+                        <button>Духовка</button>
+                        <button>
+                            <span class="add_services-text">Доп. поручения</span> 
+                            <div class="add_services-counter">
+                                <div class="add_services-counter-prev"></div>
+                                <div class="add_services-counter-text">
+                                    <span class="add_services-counter-per">1</span>
+                                    час
+                                </div>
+                                <div class="add_services-counter-next"></div>
+                        </button>
+                    </div>
+
+                    <div class="modal-price-button">
+                        <button id="button-type">Вид уборки</button>
+                        <button id="button-add_services">Доп. услуги</button>
+                    </div>	
+                </div>
+                <div class="modal_price-footer">
+                    <span>На все вопросы ответим: +7 (981) 935-83-73</span>
+                </div>
+                <!-- класс modal_price-button-select активирует кнопку -->
+                <button href="application.html" class="modal_price-button">Заказать</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Календарь JS -->
+    <script src="js/calendar.js"></script>
+
+    <!-- jquery -->
+    <script src="js/jquery-3.6.0.min.js" ></script>
+    
+    <!-- noUiSlider -->
+    <script src="js/nouislider.min.js"></script>
+
+    <!-- Swiper JS -->
+    <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
+    <script src="js/swiper-bundle.min.js"></script>
+
+    <!-- javascript -->
+    <script src="js/script_application.js"></script>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
