@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% load static %}
+{% block stylesheets %}
+	<!-- Link Swiper's CSS
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/> -->
+{% endblock stylesheets %}
+{% block content %}
+	<div id="page-preloader" class="preloader">
+		<div class="preloader-logo">
+			<img id="preloader-logo-image" src="{% static 'img/логотип 1.png' %}" alt="">
+		</div>
+		<h1>Петербургский клининг</h1>
+		<div class="preloader-text">
+			<p class="preloader-text-top done">Чистота</p>
+			<p class="preloader-text-bot done">Это просто</p>
+		</div>
+	</div>
+
+	<main class="main">
+		<div id="first_screen-id" class="first_screen">
+			<div class="first_screen-title-conteiner">
+				<div class="first_screen-title-button-call">
+					<button class="modal_button button_call" data-path="modal_call">
+						Обратный звонок
+					</button>
+				</div>
+				<div class="first_screen-title-text">
+					<p>Дорогой друг!</p>
+					<p>Познакомься с нами</p>
+					<p>за 1 минуту:</p>
+				</div>
+				<div class="first_screen-title-button-price">
+					<button class="modal_button button_price" data-path="modal_price_path">
+						Расчет стоимости
+					</button>
+				</div>
+			</div>
+			<div class="first_screen-content">
+				<div class="first_screen-content-element">
+					<div class="first_screen-content-element-image">
+						<img src="{% static 'img/весы.png' %}" alt="">
+					</div>
+					
+					<p class="first_screen-content-element_text">
+						Наши услуги - <br>
+						разумное соотношение <br>
+						цены и качества
+					</p>
+				</div>
+				<div class="first_screen-content-element">
+					<div class="first_screen-content-element-image">
+						<img src="{% static 'img/список копия 1.png' %}" alt="">
+					</div>
+					
+					<p class="first_screen-content-element_text">
+						Перечень работ <br>
+						по каждой уборке больше, <br>
+						чем во многих <br>
+						клининговых компаниях; 
+
+					</p>
+				</div>
+				<div class="first_screen-content-element">
+					<div class="first_screen-content-element-image">
+						<img src="{% static 'img/герб  2.png' %}" alt="">
+					</div>
+					<p class="first_screen-content-element_text ">	
+						Петербургский клининг - <br>
+						это честность, качество <br>
+						и открытость;		
+					</p>	
+				</div>
+			</div>
+			<div class="first_screen-about">
+				<a class="first_screen-about-link" href="about.html">
+					<strong>Аргументируем</strong><br>
+					в разделе “О нас”
+				</a>
+			</div>
+			<div class="first_screen-nav">
+				<div class="side_nav side_nav-black">
+					<div class="side_nav_block side_nav_block_1">
+						<p class="side_nav_block-text_1">Кто мы</p>
+						<a href="#first_screen-id">
+							<div class="elipse elipse_active"></div>
+						</a>
+					</div>
+					<div class="side_nav_block side_nav_block_2">
+						<p class="side_nav_block-text_2">Как мы <br>работаем</p>
+						<a href="#second_screen-id">
+							<div class="elipse"></div>
+						</a>
+					</div>
+					<div class="side_nav_block side_nav_block_3">
+						<p>Акции</p>
+						<a href="#third_screen-id">
+							<div class="elipse"></div>
+						</a>
+					</div>
+					<div class="side_nav_block">
+						<p>Контакты</p>
+						<a href="#contact_screen-id">
+							<div class="elipse"></div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>	
+		<div id="second_screen-id" class="second_screen">
+			<h2 class="second_screen-title">
+				Что Вас ждёт?
+				<p>От заказа до оплаты</p>
+			</h2>
+			<div class="second_screen-conteiner">
+				<div class="second_screen-content second_screen-content_position second_screen-content-grid-1">
+					<div class="second_screen-content-number">
+						1
+					</div>
+					<h3 class="second_screen-content-title">
+						Оформление заказа
+					</h3>
+					<p class="second_screen-content-text">
+						Можно оформить на сайте,<br> позвонить или заказать обратный<br> звонок
+					</p>
+				</div>
+				<div class="second_screen-content second_screen-content-grid-3">
+					<div class="second_screen-content-number">
+						3
+					</div>
+					<h3 class="second_screen-content-title">
+						Выезд персонала
+					</h3>
+					<p class="second_screen-content-text">
+						На генеральную и послестроительную<br class="br-none"> уборки мы привозим весь инвентарь,<br class="br-none"> от Вас ничего не требуется.
+						<p class="second_screen-content-text-p"> На стандартную уборку Вам нужно<br class="br-none"> предоставить ведро, пылесос и швабру.</p> 
+					</p>
+				</div>
+				<div class="second_screen-content second_screen-content_position second_screen-content-grid-5">
+					<div class="second_screen-content-number">
+						5
+					</div>
+					<h3 class="second_screen-content-title">
+						Прием работ
+					</h3>
+					<p class="second_screen-content-text">
+						Вы подписываете с клинером<br> акт выполненных работ
+					</p>
+				</div>
+				<div class="second_screen-content second_screen-content_position_2 second_screen-content-grid-2">
+					<div class="second_screen-content-number">
+						2
+					</div>
+					<h3 class="second_screen-content-title">
+						Подтверждение
+					</h3>
+					<p class="second_screen-content-text">
+						Мы перезваниваем, уточняем<br> детали и подтверждаем заказ
+					</p>
+				</div>
+				<div class="second_screen-content second_screen-content-grid-4">
+					<div class="second_screen-content-number">
+						4
+					</div>
+					<h3 class="second_screen-content-title">
+						Подписание договора,<br>
+						уборка
+					</h3>
+					<p class="second_screen-content-text">
+						Вы подписываете с клинером <span class="italic"> договор на оказание услуг по уборке помещения. </span><p class="second_screen-content-text-p"> Во время уборки Вы можете как <br class="br-none"> находиться дома, так и оставить клинера <br class="br-none"> одного </p>
+					</p>
+				</div>
+				<div class="second_screen-content second_screen-content_position_2 second_screen-content-grid-6">
+					<div class="second_screen-content-number">
+						6
+					</div>
+					<h3 class="second_screen-content-title">
+						Оплата
+					</h3>
+					<p class="second_screen-content-text">
+						Онлайн на сайте или<br> наличными клинеру
+					</p>
+				</div>
+			</div>
+			<div class="second_screen-nav">
+				<div class="side_nav">
+					<div class="side_nav_block side_nav_block_1">
+						<p class="side_nav_block-text_1 side_nav-white_text">Кто мы</p>
+						<a href="#first_screen-id">
+							<div class="elipse"></div>
+						</a>
+					</div>
+					<div class="side_nav_block side_nav_block_2">
+						<p class="side_nav_block-text_2 side_nav-white_text">Как мы <br>работаем</p>
+						<a href="#second_screen-id">
+							<div class="elipse elipse_active"></div>
+						</a>
+					</div>
+					<div class="side_nav_block side_nav_block_3">
+						<p class="side_nav-white_text">Акции</p>
+						<a href="#third_screen-id">
+							<div class="elipse"></div>
+						</a>
+					</div>
+					<div class="side_nav_block">
+						<p class="side_nav-white_text">Контакты</p>
+						<a href="#contact_screen-id">
+							<div class="elipse"></div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="third_screen-id" class="third_screen">
+			<h1 class="third_screen-title">
+				<p class="third_screen-title-top">Ваши акции.</p>
+				<p class="third_screen-title-bot">Пользуйтесь на здоровье!</p>
+			</h1>
+			<div class="third_screen-content">
+				<div class="third_screen-content-conteiner">
+					<div class="third_screen-content-element">
+						<div class="third_screen-content-element-title">
+							“Новичок”
+						</div>
+						<div class="third_screen-content-element-image">
+							<img src="{% static 'img/104982_ребенок.png' %}" alt="">
+						</div>
+						<div class="third_screen-content-element-text">
+							<p>На первую уборку</p>
+							<p>Скидка 20%</p>
+						</div>
+					</div>
+					<div class="third_screen-content-element">
+						<div class="third_screen-content-element-title">
+							“Лучший друг”
+						</div>
+						<div class="third_screen-content-element-image">
+							<img src="{% static 'img/Без имени-1 1_3человека.png' %}" alt="">
+						</div>
+						<div class="third_screen-content-element-text">
+							Минус 30% <br> на любую уборку <br> за приведённого друга
+						</div>
+					</div>
+					<div class="third_screen-content-element">
+						<div class="third_screen-content-element-title">
+							“Привет, студент”
+						</div>
+						<div class="third_screen-content-element-image">
+							<img src="{% static 'img/0da49c1738b4df9bcec59672f3f99eed 1_студент.png' %}" alt="">
+						</div>
+						<div class="third_screen-content-element-text">
+							Скидка 10% <br> для студентов высших и <br> средних специальных учебных заведений
+						</div>
+					</div>
+					<div class="third_screen-content-element">
+						<div class="third_screen-content-element-title">
+							“Дай пять!”
+						</div>
+						<div class="third_screen-content-element-image">
+							<img src="{% static 'img/1917951_дай_пять.png' %}" alt="">
+						</div>
+						<div class="third_screen-content-element-text">
+							Каждая пятая уборка - <br> бесплатно
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="third_screen-about">
+				<a class="third_screen-about-link" href="about.html">
+					<span>Подробнее об акциях</span>
+					<p>	
+						в разделе “О нас”
+					</p>
+				</a>
+			</div>
+			<div class="third_screen-nav">
+				<div class="side_nav side_nav-black">
+					<div class="side_nav_block side_nav_block_1">
+						<p class="side_nav_block-text_1">Кто мы</p>
+						<a href="#first_screen-id">
+							<div class="elipse "></div>
+						</a>
+					</div>
+					<div class="side_nav_block side_nav_block_2">
+						<p class="side_nav_block-text_2">Как мы <br>работаем</p>
+						<a href="#second_screen-id">
+							<div class="elipse"></div>
+						</a>
+					</div>
+					<div class="side_nav_block side_nav_block_3">
+						<p>Акции</p>
+						<a href="#third_screen-id">
+							<div class="elipse elipse_active"></div>
+						</a>
+					</div>
+					<div class="side_nav_block">
+						<p>Контакты</p>
+						<a href="#contact_screen-id">
+							<div class="elipse"></div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="contact_screen-id" class="contact_screen">
+			<h2 class="contact_screen-title">
+				Наши контакты
+			</h2>
+			<div class="contact_screen-content">
+				<div class="contact_screen-map">
+					<img class="contact_screen-map-image" src="{% static 'img/Карта.png' %}" alt="">
+				</div>
+				<div class="contact_screen-content-info">
+					<ul class="contact_screen-content-info-text">
+						<li>
+							Мы проводим уборки в пределах КАД
+							с 9:00 до 18:00
+						</li>
+						<li>	
+							Приём заказов с 8:00 до 22:00
+						</li>
+						<li>	
+							+7 (981) 935-83-73 <br>
+							roman__turaev@mail.ru
+						</li>
+					</ul>
+					<div class="contact_screen-content-info-button">
+						<a href="application.html" class="button_zakaz">заказ</a>
+						<a href="services.html" class="button_services">услуги</a>
+					</div>
+				</div>
+			</div>
+			<div class="contact_screen-nav">
+				<div class="side_nav">
+					<div class="side_nav_block side_nav_block_1">
+						<p class="side_nav_block-text_1 side_nav-white_text">Кто мы</p>
+						<a href="#first_screen-id">
+							<div class="elipse"></div>
+						</a>
+					</div>
+					<div class="side_nav_block side_nav_block_2">
+						<p class="side_nav_block-text_2 side_nav-white_text">Как мы <br>работаем</p>
+						<a href="#second_screen-id">
+							<div class="elipse"></div>
+						</a>
+					</div>
+					<div class="side_nav_block side_nav_block_3">
+						<p class="side_nav-white_text">Акции</p>
+						<a href="#third_screen-id">
+							<div class="elipse"></div>
+						</a>
+					</div>
+					<div class="side_nav_block">
+						<p class="side_nav-white_text">Контакты</p>
+						<a href="#contact_screen-id">
+							<div class="elipse elipse_active"></div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+{% endblock content %}
+
+{% block scripts %}
+	<!-- Swiper JS
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
+
+	<script src="{% static 'js/preloader.js' %}"></script>
+{% endblock scripts %}

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title> Клининг </title>
+		<!-- noUiSlider -->
+        <link rel="stylesheet" href="{% static 'css/nouislider.min.css' %}">
+        {% block stylesheets %}
+          
+        {% endblock stylesheets %}
+        <!-- style -->
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+	</head>
+    <body>
+        <div class="wrapper">
+			<header class="header">
+				<div class="header-burger">
+					<span></span>
+				</div>
+				<div class="header-button-container">
+					<div class="header-button active_button">
+						<a href="index.html">Главная</a>
+					</div>
+					<div class="header-button" data-target="link_application">
+						<a href="application.html">Заказ</a>
+					</div>	
+				</div>
+				<div class="header-logo">
+					<a href="index.html">
+						<img src="{% static 'img/логотип 2.png' %}" alt="">
+					</a>
+					<a href="index.html">
+						<span>Петербургский клининг</span>
+					</a>
+				</div>
+				<div class="header-button-container">
+					<div class="header-button">
+						<a href="services.html">Услуги</a>
+					</div>
+					<div class="header-button">
+						<a href="about.html">О нас</a> 
+					</div>	
+				</div>
+				<div class="dropdown-content dropdown_user">  
+					<a class="dropdown-element" href="index.html">Главная</a>
+					<a class="dropdown-element" href="services.html">Услуги</a>
+					<a class="dropdown-element" href="application.html">Заказы</a>
+					<a class="dropdown-element-mobile modal_button" data-path="modal_call" href="#">Обратный звонок</a>
+					<a class="dropdown-element-mobile modal_button" data-path="modal_price_path" href="#">Расчет стоимости</a>
+					<a class="dropdown-element" href="about.html">О нас</a>
+				</div>
+			</header>
+            {% block content %}
+              
+            {% endblock content %}
+            <footer class="footer">
+				<p>
+					roman__turaev@mail.ru   +7 (981) 935-83-73
+				</p>
+			</footer>
+            <div class="modals">
+                <div class="modals-overlay">
+                    <div class="modal block_call" data-target="modal_call">
+                        <div class="block_call-conteiner">
+                            <div class="block_call-left-image">
+                                <img src="{% static 'img/metla.png' %}" alt="">
+                            </div>
+                            <div class="block_call-input">
+                                <input class="block_call-input-element" type="text" placeholder="Имя">
+                                <input class="block_call-input-element" type="text" placeholder="Телефон">
+                            </div>
+                            <div class="block_call-right-image">
+                                <img src="{% static 'img/metla.png' %}" alt="">
+                            </div>
+                        </div>
+                        <div class="block_call-text">
+                            <input id="block_call_input" class="custom-checkbox" type="checkbox">
+                            <label for="block_call_input">
+                                <img class="custom-checkbox-active" src="{% static 'img/Галочка.svg' %}" alt="">
+                            </label>
+                            <span class="block_call-text-span">Я согласен с <a href="politics.html">политикой обработки персональных данных</a> </span>
+                        </div>
+                        <div class="block_call-button">
+                            <button id="block_call-button_id">Отправить</button>
+                        </div>
+                    </div>
+                    <div class="modal" data-target="modal_price_path">
+                        <div class="modal_price">
+                            <h1 class="modal_price-sum">
+                                0 ₽
+                            </h1>
+                            <div class="modal_price-square">
+                                <span>Площадь, </span> 
+                                <input type="text" class="modal_price-square-input" onchange="input_onchange(this.value)">
+                                <span>м</span> 
+                            </div>
+                            <div id="form">
+                                <div class="bar">
+                                    <div id="m-slider"></div>
+                                </div>
+                            </div>
+    
+                            <div class="modal-price-type_selection">
+                                <button>Стандартная</button>
+                                <button>Послестроительная</button>
+                                <button>Генеральная</button>
+                                <button>Мойка окон</button>
+                            </div>
+    
+                            <div class="modal-price-add_services">
+                                <button>Холодильник</button>
+                                <button>Внутри кухонных шкафчиков</button>
+                                <button>Вытяжка </button>
+                                <button>
+                                    <span class="add_services-text">Стирка</span> 
+                                    <div class="add_services-counter">
+                                        <div class="add_services-counter-prev"></div>
+                                        <div class="add_services-counter-text">
+                                            <span class="add_services-counter-per">1</span>
+                                            загрузка
+                                        </div>
+                                        <div class="add_services-counter-next"></div>
+                                    </div>
+                                </button>
+                                <button>Микроволновка</button>
+                                <button>
+                                    <span class="add_services-text">Глажка</span> 
+                                    <div class="add_services-counter">
+                                        <div class="add_services-counter-prev"></div>
+                                        <div class="add_services-counter-text">
+                                            <span class="add_services-counter-per">1</span>
+                                            час
+                                        </div>
+                                        <div class="add_services-counter-next"></div>
+                                </button>
+                                <button>Духовка</button>
+                                <button>
+                                    <span class="add_services-text">Доп. поручения</span> 
+                                    <div class="add_services-counter">
+                                        <div class="add_services-counter-prev"></div>
+                                        <div class="add_services-counter-text">
+                                            <span class="add_services-counter-per">1</span>
+                                            час
+                                        </div>
+                                        <div class="add_services-counter-next"></div>
+                                </button>
+                            </div>
+    
+                            <div class="modal-price-button">
+                                <button id="button-type">Вид уборки</button>
+                                <button id="button-add_services">Доп. услуги</button>
+                            </div>	
+                        </div>
+                        <div class="modal_price-footer">
+                            <span>На все вопросы ответим: +7 (981) 935-83-73</span>
+                        </div>
+                        <!-- класс modal_price-button-select активирует кнопку -->
+                        <button href="application.html" class="modal_price-button">Заказать</button>
+                    </div>
+                </div>
+            </div>
+        <!-- jquery -->
+        <script src="js/jquery-3.6.0.min.js" ></script>
+
+        <!-- noUiSlider -->
+        <script src="js/nouislider.min.js"></script>
+        {% block scripts %}
+          
+        {% endblock scripts %}
+        <!-- JS -->
+        <script src="js/script.js"></script>
+    </body>
+</html>

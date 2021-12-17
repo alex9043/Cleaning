@@ -62,7 +62,7 @@ let noUiSlider_values = document.querySelector('.modal_price-square-input');
 
 document.addEventListener("DOMContentLoaded", () =>{
     noUiSlider.create(priceSlider, {
-        start: 55,
+        start: 50,
         tooltips: false,
         connect: [true, false],
         step: 1,
