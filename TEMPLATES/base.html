@@ -24,11 +24,11 @@
 						<a href="index.html">Главная</a>
 					</div>
 					<div class="header-button" data-target="link_application">
-						<a href="application.html">Заказ</a>
+						<a href="/order">Заказ</a>
 					</div>	
 				</div>
 				<div class="header-logo">
-					<a href="index.html">
+					<a href="pages/index.html">
 						<img src="{% static 'img/логотип 2.png' %}" alt="">
 					</a>
 					<a href="index.html">
@@ -37,19 +37,19 @@
 				</div>
 				<div class="header-button-container">
 					<div class="header-button">
-						<a href="services.html">Услуги</a>
+						<a href="pages/services.html">Услуги</a>
 					</div>
 					<div class="header-button">
-						<a href="about.html">О нас</a> 
+						<a href="pages/about.html">О нас</a> 
 					</div>	
 				</div>
 				<div class="dropdown-content dropdown_user">  
 					<a class="dropdown-element" href="index.html">Главная</a>
-					<a class="dropdown-element" href="services.html">Услуги</a>
-					<a class="dropdown-element" href="application.html">Заказы</a>
+					<a class="dropdown-element" href="pages/services.html">Услуги</a>
+					<a class="dropdown-element" href="/order">Заказы</a>
 					<a class="dropdown-element-mobile modal_button" data-path="modal_call" href="#">Обратный звонок</a>
 					<a class="dropdown-element-mobile modal_button" data-path="modal_price_path" href="#">Расчет стоимости</a>
-					<a class="dropdown-element" href="about.html">О нас</a>
+					<a class="dropdown-element" href="pages/about.html">О нас</a>
 				</div>
 			</header>
             {% block content %}
@@ -161,15 +161,16 @@
                     </div>
                 </div>
             </div>
+        </div>
         <!-- jquery -->
-        <script src="js/jquery-3.6.0.min.js" ></script>
+        <script src="{% static 'js/jquery-3.6.0.min.js' %}" ></script>
 
         <!-- noUiSlider -->
-        <script src="js/nouislider.min.js"></script>
+        <script src="{% static 'js/nouislider.min.js' %}"></script>
         {% block scripts %}
           
         {% endblock scripts %}
         <!-- JS -->
-        <script src="js/script.js"></script>
+        <script src="{% static 'js/script.js' %}"></script>
     </body>
 </html>
