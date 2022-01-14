@@ -34,10 +34,12 @@
                 </div>
                 <div class="slide-choose_cleaning-conteiner">
                     <div class="slide-choose_cleaning-content">
-                        <div class="slide-choose_cleaning-content-block">
-                            <button type="button" multiple name="cleaningType1" id="choose_cleaning-1" class="slide-choose_cleaning-content-image">
+                        <input type="radio" name="cleaningType" id="cleaningType-1" value="Поддерживающая" class="slide-choose_cleaning-content-radio">
+                        <label for="cleaningType-1">
+                            <div class="slide-choose_cleaning-content-block">
+                            <div id="choose_cleaning-1" class="slide-choose_cleaning-content-image">
                                 <img src="{% static 'img/подд_слайд_1.png' %}" alt="">
-                            </button>
+                            </div>
                             <div class="slide-choose_cleaning-content-name">
                                 Поддерживающая
                             </div>
@@ -47,71 +49,84 @@
                             <div class="slide-choose_cleaning-content-text">
                                 60 р/м<sup>2</sup>
                             </div>
-                        </div>
+                            </div>
+                        </label>
                     </div>
                     <div class="slide-choose_cleaning-content">
-                        <div class="slide-choose_cleaning-content-block">
-                            <button type="button" multiple name="cleaningType2" id="choose_cleaning-2" class="slide-choose_cleaning-content-image">
-                                <img src="{% static 'img/станд_слайд_1.png' %}" alt="">
-                            </button>
-                            <div class="slide-choose_cleaning-content-name">
-                                Стандартная
+                        <input type="radio" name="cleaningType" id="cleaningType-2" value="Стандартная" class="slide-choose_cleaning-content-radio" checked>
+                        <label for="cleaningType-2">
+                            <div class="slide-choose_cleaning-content-block">
+                                <div id="choose_cleaning-2" class="slide-choose_cleaning-content-image">
+                                    <img src="{% static 'img/станд_слайд_1.png' %}" alt="">
+                                </div>
+                                <div class="slide-choose_cleaning-content-name">
+                                    Стандартная
+                                </div>
+                                <div class="slide-choose_cleaning-content-min_image reverse-image">
+                                    <img src="{% static 'img/Стандарт_исконка.svg' %}" alt="">
+                                </div>
+                                <div class="slide-choose_cleaning-content-text">
+                                    75 р/м<sup>2</sup>
+                                </div>
                             </div>
-                            <div class="slide-choose_cleaning-content-min_image reverse-image">
-                                <img src="{% static 'img/Стандарт_исконка.svg' %}" alt="">
-                            </div>
-                            <div class="slide-choose_cleaning-content-text">
-                                75 р/м<sup>2</sup>
-                            </div>
-                        </div>
+                        </label>
                     </div>
                     <div class="slide-choose_cleaning-content">
-                        <div class="slide-choose_cleaning-content-block">
-                            <button type="menu" multiple name="cleaningType3" id="choose_cleaning-3" class="slide-choose_cleaning-content-image">
-                                <img src="{% static 'img/ген_слайд_1.png' %}" alt="">
-                            </button>
-                            <div class="slide-choose_cleaning-content-name">
-                                Генеральная
+                        <input type="radio" name="cleaningType" id="cleaningType-3" value="Генеральная" class="slide-choose_cleaning-content-radio">
+                        <label for="cleaningType-3">
+                            <div class="slide-choose_cleaning-content-block">
+                                <div id="choose_cleaning-3" class="slide-choose_cleaning-content-image">
+                                    <img src="{% static 'img/ген_слайд_1.png' %}" alt="">
+                                </div>
+                                <div class="slide-choose_cleaning-content-name">
+                                    Генеральная
+                                </div>
+                                <div class="slide-choose_cleaning-content-min_image">
+                                    <img src="{% static 'img/Генералка_иконка.svg' %}" alt="">
+                                </div>
+                                <div class="slide-choose_cleaning-content-text">
+                                    125 р/м<sup>2</sup>
+                                </div>
                             </div>
-                            <div class="slide-choose_cleaning-content-min_image">
-                                <img src="{% static 'img/Генералка_иконка.svg' %}" alt="">
-                            </div>
-                            <div class="slide-choose_cleaning-content-text">
-                                125 р/м<sup>2</sup>
-                            </div>
-                        </div>
+                        </label>
                     </div>
                     <div class="slide-choose_cleaning-content">
-                        <div class="slide-choose_cleaning-content-block">
-                            <button type="button" multiple name="cleaningType4" id="choose_cleaning-4" class="slide-choose_cleaning-content-image">
-                                <img src="{% static 'img/послестрой_слайд_1.png' %}" alt="">
-                            </button>
-                            <div class="slide-choose_cleaning-content-name">
-                                Послестроительная
+                        <input type="radio" name="cleaningType" id="cleaningType-4" value="Послестроительная" class="slide-choose_cleaning-content-radio">
+                        <label for="cleaningType-4">
+                            <div class="slide-choose_cleaning-content-block">
+                                <div id="choose_cleaning-4" class="slide-choose_cleaning-content-image">
+                                    <img src="{% static 'img/послестрой_слайд_1.png' %}" alt="">
+                                </div>
+                                <div class="slide-choose_cleaning-content-name">
+                                    Послестроительная
+                                </div>
+                                <div class="slide-choose_cleaning-content-min_image">
+                                    <img src="{% static 'img/Послестрой_иконка.png' %}" alt="">
+                                </div>
+                                <div class="slide-choose_cleaning-content-text">
+                                    140 р/м<sup>2</sup>
+                                </div>
                             </div>
-                            <div class="slide-choose_cleaning-content-min_image">
-                                <img src="{% static 'img/Послестрой_иконка.png' %}" alt="">
-                            </div>
-                            <div class="slide-choose_cleaning-content-text">
-                                140 р/м<sup>2</sup>
-                            </div>
-                        </div>
+                        </label>
                     </div>
                     <div class="slide-choose_cleaning-content">
-                        <div multiple name="cleaningType5" class="slide-choose_cleaning-content-block">
-                            <button type="button" id="choose_cleaning-5" class="slide-choose_cleaning-content-image">
-                                <img src="{% static 'img/окно_слайд_1.png' %}" alt="">
-                            </button>
-                            <div class="slide-choose_cleaning-content-name">
-                                Мойка окон
+                        <input type="radio" name="cleaningType" id="cleaningType-5" value="Мойка окон" class="slide-choose_cleaning-content-radio">
+                        <label for="cleaningType-5">
+                            <div class="slide-choose_cleaning-content-block">
+                                <div id="choose_cleaning-5" class="slide-choose_cleaning-content-image">
+                                    <img src="{% static 'img/окно_слайд_1.png' %}" alt="">
+                                </div>
+                                <div class="slide-choose_cleaning-content-name">
+                                    Мойка окон
+                                </div>
+                                <div class="slide-choose_cleaning-content-min_image">
+                                    <img src="{% static 'img/окно_иконка.png' %}" alt="">
+                                </div>
+                                <div class="slide-choose_cleaning-content-text">
+                                    250 р/створка
+                                </div>
                             </div>
-                            <div class="slide-choose_cleaning-content-min_image">
-                                <img src="{% static 'img/окно_иконка.png' %}" alt="">
-                            </div>
-                            <div class="slide-choose_cleaning-content-text">
-                                250 р/створка
-                            </div>
-                        </div>
+                        </label>
                     </div>
                 </div>
                 <div class="slide-elipse">
@@ -123,7 +138,7 @@
                     Укажите площадь <br> квартиры или дома
                 </div>
                 <div class="slide-input-conteiner-square">
-                    <input name="area" type="text" class="slide-input-square" placeholder="75" value="{{ area }}">
+                    <input type="text" class="slide-input-square" placeholder="75" name="area">
                     <span>м<sup>2</sup></span>
                 </div>
             </div>
@@ -138,6 +153,7 @@
                 </div>
                 <div class="slide-services-conteiner">
                     <div class="slide-services-content">
+                        <input type="checkbox" name="serviceName" id="slide-services-content-checkbox-1" class="slide-services-content-checkbox">
                         <div class="slide-services-content-image">
                             <img class="slide-services-content-image-full" src="{% static 'img/Холодильник.png' %}" alt="">
                             <img class="slide-services-content-image-middle" src="{% static 'img/Холодильник_мин.png' %}" alt="">
@@ -158,8 +174,10 @@
                             <div class="services-counter-count"> x<span class="services-counter-count-per">1</span></div>
                             <div class="services-counter-button-next"></div>
                         </div>
+                        <input type="text" name="serviceNumber" id="slide-services-number-checkbox-1" class="slide-services-number-checkbox">
                     </div>
                     <div class="slide-services-content">
+                        <input type="checkbox" name="serviceName" id="slide-services-content-checkbox-2" class="slide-services-content-checkbox">
                         <div class="slide-services-content-image">
                             <img class="slide-services-content-image-full" src="{% static 'img/Вытяжка.png' %}" alt="">
                             <img class="slide-services-content-image-middle" src="{% static 'img/Вытяжка_midle.png' %}" alt="">
@@ -180,8 +198,10 @@
                             <div class="services-counter-count"> x<span class="services-counter-count-per">1</span></div>
                             <div class="services-counter-button-next"></div>
                         </div>
+                        <input type="text" name="serviceNumber" id="slide-services-number-checkbox-2" class="slide-services-number-checkbox">
                     </div>
                     <div class="slide-services-content">
+                        <input type="checkbox" name="serviceName" id="slide-services-content-checkbox-3" class="slide-services-content-checkbox">
                         <div class="slide-services-content-image">
                             <img class="slide-services-content-image-full" src="{% static 'img/Микроволновка.png' %}" alt="">
                             <img class="slide-services-content-image-middle" src="{% static 'img/Микроволновка_midle.png' %}" alt="">
@@ -204,8 +224,10 @@
                             <div class="services-counter-count"> x<span class="services-counter-count-per">1</span></div>
                             <div class="services-counter-button-next"></div>
                         </div>
+                        <input type="text" name="serviceNumber" id="slide-services-number-checkbox-3" class="slide-services-number-checkbox">
                     </div>
                     <div class="slide-services-content">
+                        <input type="checkbox" name="serviceName" id="slide-services-content-checkbox-4" class="slide-services-content-checkbox">
                         <div class="slide-services-content-image">
                             <img class="slide-services-content-image-full" src="{% static 'img/Шкафчик.png' %}" alt="">
                             <img class="slide-services-content-image-middle" src="{% static 'img/Шкафчик_midle.png' %}" alt="">
@@ -225,8 +247,10 @@
                                 Пожалуйста, заранее освободите шкафчики. Мы можем сделать это самостоятельно, за почасовую отплау
                             </p>
                         </div>
+                        <input type="text" name="serviceNumber" id="slide-services-number-checkbox-4" class="slide-services-number-checkbox">
                     </div>
                     <div class="slide-services-content">
+                        <input type="checkbox" name="serviceName" id="slide-services-content-checkbox-5" class="slide-services-content-checkbox">
                         <div class="slide-services-content-image">
                             <img class="slide-services-content-image-full" src="{% static 'img/Окно.png' %}" alt="">
                             <img class="slide-services-content-image-middle" src="{% static 'img/Окно_midle.png' %}" alt="">
@@ -249,8 +273,10 @@
                             <div class="services-counter-count"><span class="services-counter-count-per">10</span><br>створок</div>
                             <div class="services-counter-button-next"></div>
                         </div>
+                        <input type="text" name="serviceNumber" id="slide-services-number-checkbox-5" class="slide-services-number-checkbox">
                     </div>
                     <div class="slide-services-content">
+                        <input type="checkbox" name="serviceName" id="slide-services-content-checkbox-6" class="slide-services-content-checkbox">
                         <div class="slide-services-content-image">
                             <img class="slide-services-content-image-full" src="{% static 'img/утюг.png' %}" alt="">
                             <img class="slide-services-content-image-middle" src="{% static 'img/утюг_midle.png' %}" alt="">
@@ -278,8 +304,10 @@
                             <div class="services-counter-count"> <span class="services-counter-count-per">1</span> час</div>
                             <div class="services-counter-button-next"></div>
                         </div>
+                        <input type="text" name="serviceNumber" id="slide-services-number-checkbox-6" class="slide-services-number-checkbox">
                     </div>
                     <div class="slide-services-content">
+                        <input type="checkbox" name="serviceName" id="slide-services-content-checkbox-7" class="slide-services-content-checkbox">
                         <div class="slide-services-content-image">
                             <img class="slide-services-content-image-full" src="{% static 'img/Стиралка.png' %}" alt="">
                             <img class="slide-services-content-image-middle" src="{% static 'img/Стиралка_midle.png' %}" alt="">
@@ -302,8 +330,10 @@
                             <div class="services-counter-count"> x<span class="services-counter-count-per">1</span></div>
                             <div class="services-counter-button-next"></div>
                         </div>
+                        <input type="text" name="serviceNumber" id="slide-services-number-checkbox-7" class="slide-services-number-checkbox">
                     </div>
                     <div class="slide-services-content">
+                        <input type="checkbox" name="serviceName" id="slide-services-content-checkbox-8" class="slide-services-content-checkbox">
                         <div class="slide-services-content-image">
                             <img class="slide-services-content-image-full" src="{% static 'img/Плита.png' %}" alt="">
                             <img class="slide-services-content-image-middle" src="{% static 'img/Плита_midle.png' %}" alt="">
@@ -326,8 +356,10 @@
                             <div class="services-counter-count"> x<span class="services-counter-count-per">1</span></div>
                             <div class="services-counter-button-next"></div>
                         </div>
+                        <input type="text" name="serviceNumber" id="slide-services-number-checkbox-8" class="slide-services-number-checkbox">
                     </div>
                     <div class="slide-services-content">
+                        <input type="checkbox" name="serviceName" id="slide-services-content-checkbox-9" class="slide-services-content-checkbox">
                         <div class="slide-services-content-image">
                             <img class="slide-services-content-image-full" src="{% static 'img/Книга.png' %}" alt="">
                             <img class="slide-services-content-image-middle" src="{% static 'img/Книга_midle.png' %}" alt="">
@@ -352,8 +384,10 @@
                             <div class="services-counter-count"> <span class="services-counter-count-per">1</span> час</div>
                             <div class="services-counter-button-next"></div>
                         </div>
+                        <input type="text" name="serviceNumber" id="slide-services-number-checkbox-9" class="slide-services-number-checkbox">
                     </div>
                     <div class="slide-services-content">
+                        <input type="checkbox" name="serviceName" id="slide-services-content-checkbox-10" class="slide-services-content-checkbox">
                         <div class="slide-services-content-image">
                             <img class="slide-services-content-image-full" src="{% static 'img/киска.png' %}" alt="">
                             <img class="slide-services-content-image-middle" src="{% static 'img/киска_midle.png' %}"' %} alt="">
@@ -371,8 +405,12 @@
                                 С заботой о Ваших любимых питомцах!
                             </p>
                         </div>
+                        <input type="text" name="serviceNumber" id="slide-services-number-checkbox-10" class="slide-services-number-checkbox">
                     </div>
                 </div>
+                
+                <!-- <input type="text" name="serviceName" class="services-name-input">
+                <input type="text" name="serviceNumber" class="services-counter-input"> -->
             </div>
             <div class="swiper-slide no-scale">
                 <div class="swiper-slide-flex">
@@ -388,6 +426,7 @@
 
                         <div class="calendar">
                             <div class="month">
+                                <input type="text" name="month" id="month_input">
                                 <i class="prev">
                                     <svg class="strelka-left-3" viewBox="0 0 5 9">
                                         <path
@@ -416,10 +455,11 @@
                                 <div>вс</div>
                             </div>
                             <div class="days"></div>
+                            <input type="text" name="day" id="days_input">
                         </div>
 
                         <div class="swiper-slide-stage_4-input-block">
-                            <input type="time" value="12:00" class="swiper-slide-stage_4-input">
+                            <input type="time" value="12:00" class="swiper-slide-stage_4-input" name="time">
                         </div>
                     </div>
 
@@ -434,12 +474,12 @@
                             Ваши контакты
                         </div>
                         <div class="swiper-slide-stage_5-content">
-                            <input type="text" class="stage_5-content-input" placeholder="Имя">
-                            <input type="text" class="stage_5-content-input" placeholder="Фамилия">
-                            <input type="tel" class="stage_5-content-input" placeholder="Телефон">
-                            <input type="email" class="stage_5-content-input" placeholder="Электронная почта">
+                            <input type="text" class="stage_5-content-input" placeholder="Имя" name="firstName">
+                            <input type="text" class="stage_5-content-input" placeholder="Фамилия" name="secondName">
+                            <input type="tel" class="stage_5-content-input" placeholder="Телефон" name="phone">
+                            <input type="email" class="stage_5-content-input" placeholder="Электронная почта" name="email">
                         </div>
-                        <input type="text" class="swiper-slide-stage_5-input" placeholder="Адрес">
+                        <input type="text" class="swiper-slide-stage_5-input" placeholder="Адрес" name="address">
                     </div>
                 </div>
             </div>
@@ -488,7 +528,10 @@
                             <li class="slide_information-content slide_information-content-size">
                                 <p>Наличные</p>
                             </li>
-                            <li class="slide_information-content slide_information-content-size">
+                            <li>
+                                <p>{{area}}</p>
+                            </li>
+                            <!-- <li class="slide_information-content slide_information-content-size">
                                 <p>Банковская карта</p>
                             </li>
                             <li class="slide_information-content slide_information-content-size">
@@ -498,7 +541,7 @@
                                 <p>
                                     Гугл
                                 </p>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
                 </div>

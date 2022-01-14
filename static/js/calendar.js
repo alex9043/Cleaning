@@ -1,5 +1,6 @@
 const date = new Date();
 
+
 const renderCalendar = () => {
   date.setDate(7);
 
@@ -67,6 +68,9 @@ const renderCalendar = () => {
     days += `<div class="next-date">${j}</div>`;
     monthDays.innerHTML = days;
   }
+  
+  document.querySelector('#month_input').value = document.querySelector('.date h1').innerHTML;
+  document.querySelector('#days_input').value = document.querySelector('.select_day').innerHTML;
 };
 
 document.querySelector(".prev").addEventListener("click", () => {
@@ -83,6 +87,7 @@ renderCalendar();
 
 document.querySelector('.days').addEventListener('click', e => {
   const btns = document.querySelectorAll('.days div');
+
   // e.target - целевой элемент
   let content = e.target.innerHTML;
 
@@ -100,5 +105,7 @@ document.querySelector('.days').addEventListener('click', e => {
       el.classList.add('select_day');
     }
   });
-  console.info(`Содержимое элемента: "${content}"!`);
+  console.log(`${content}`);
+  
+  document.querySelector('#days_input').value = document.querySelector('.select_day').innerHTML;
 });
