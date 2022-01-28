@@ -21,7 +21,7 @@
 				</div>
 				<div class="header-button-container">
 					<div class="header-button active_button">
-						<a href="index.html">Главная</a>
+						<a href="/index">Главная</a>
 					</div>
 					<div class="header-button" data-target="link_application">
 						<a href="/order">Заказ</a>
@@ -31,25 +31,25 @@
 					<a href="pages/index.html">
 						<img src="{% static 'img/логотип 2.png' %}" alt="">
 					</a>
-					<a href="index.html">
+					<a href="/index">
 						<span>Петербургский клининг</span>
 					</a>
 				</div>
 				<div class="header-button-container">
 					<div class="header-button">
-						<a href="pages/services.html">Услуги</a>
+						<a href="/services">Услуги</a>
 					</div>
 					<div class="header-button">
-						<a href="pages/about.html">О нас</a> 
+						<a href="/about">О нас</a> 
 					</div>	
 				</div>
 				<div class="dropdown-content dropdown_user">  
-					<a class="dropdown-element" href="index.html">Главная</a>
-					<a class="dropdown-element" href="pages/services.html">Услуги</a>
+					<a class="dropdown-element" href="/index">Главная</a>
+					<a class="dropdown-element" href="/services">Услуги</a>
 					<a class="dropdown-element" href="/order">Заказы</a>
 					<a class="dropdown-element-mobile modal_button" data-path="modal_call" href="#">Обратный звонок</a>
 					<a class="dropdown-element-mobile modal_button" data-path="modal_price_path" href="#">Расчет стоимости</a>
-					<a class="dropdown-element" href="pages/about.html">О нас</a>
+					<a class="dropdown-element" href="/about">О нас</a>
 				</div>
 			</header>
             {% block content %}
@@ -57,39 +57,42 @@
             {% endblock content %}
             <footer class="footer">
 				<p>
-					roman__turaev@mail.ru   +7 (981) 935-83-73
+					St-Petersburg.clean@mail.ru   +7 (981) 706-22-66
 				</p>
 			</footer>
             <div class="modals">
                 <div class="modals-overlay">
                     <div class="modal block_call" data-target="modal_call">
-                        <div class="block_call-conteiner">
-                            <div class="block_call-left-image">
-                                <img src="{% static 'img/metla.png' %}" alt="">
+                        <form method="POST">
+                            {% csrf_token %}
+                            <div class="block_call-conteiner">
+                                <div class="block_call-left-image">
+                                    <img src="{% static 'img/metla.png' %}" alt="">
+                                </div>
+                                <div class="block_call-input">
+                                    <input type="text" class="block_call-input-element" placeholder="Имя" name="name">
+                                    <input type="text" class="block_call-input-element" placeholder="Телефон" name="phone">
+                                </div>
+                                <div class="block_call-right-image">
+                                    <img src="{% static 'img/metla.png' %}" alt="">
+                                </div>
                             </div>
-                            <div class="block_call-input">
-                                <input class="block_call-input-element" type="text" placeholder="Имя">
-                                <input class="block_call-input-element" type="text" placeholder="Телефон">
+                            <div class="block_call-text">
+                                <input id="block_call_input" class="custom-checkbox" type="checkbox">
+                                <label for="block_call_input">
+                                    <img class="custom-checkbox-active" src="{% static 'img/Галочка.svg' %}" alt="">
+                                </label>
+                                <span class="block_call-text-span">Я согласен с <a href="politics.html">политикой обработки персональных данных</a> </span>
                             </div>
-                            <div class="block_call-right-image">
-                                <img src="{% static 'img/metla.png' %}" alt="">
+                            <div class="block_call-button">
+                                <button id="block_call-button_id">Отправить</button>
                             </div>
-                        </div>
-                        <div class="block_call-text">
-                            <input id="block_call_input" class="custom-checkbox" type="checkbox">
-                            <label for="block_call_input">
-                                <img class="custom-checkbox-active" src="{% static 'img/Галочка.svg' %}" alt="">
-                            </label>
-                            <span class="block_call-text-span">Я согласен с <a href="politics.html">политикой обработки персональных данных</a> </span>
-                        </div>
-                        <div class="block_call-button">
-                            <button id="block_call-button_id">Отправить</button>
-                        </div>
+                        </form>
                     </div>
                     <div class="modal" data-target="modal_price_path">
                         <div class="modal_price">
                             <h1 class="modal_price-sum">
-                                0 ₽
+                                <span>0</span> ₽
                             </h1>
                             <div class="modal_price-square">
                                 <span>Площадь, </span> 
@@ -112,7 +115,7 @@
                             <div class="modal-price-add_services">
                                 <button>Холодильник</button>
                                 <button>Внутри кухонных шкафчиков</button>
-                                <button>Вытяжка </button>
+                                <button>Вытяжка</button>
                                 <button>
                                     <span class="add_services-text">Стирка</span> 
                                     <div class="add_services-counter">

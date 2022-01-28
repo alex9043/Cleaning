@@ -17,9 +17,12 @@ from django.contrib import admin
 from django.urls import path
 from django.urls.conf import include
 from . import views
+from callback.views import callback
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index),
+    path('index/', callback),
+    path('services/', views.services),
+    path('about/', views.about),
     path('order/', include('order.urls'))
 ]

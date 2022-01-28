@@ -1,1384 +1,1225 @@
 <!DOCTYPE html>
-<html lang="ru">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Клининг </title>
-    <!-- noUiSlider -->
-	<link rel="stylesheet" href="css/nouislider.min.css">
-    
-    <!-- style -->
-    <link rel="stylesheet" href="css/style.css">
-</head>
-
-<body>
-    <div class="wrapper">
-        <header id="header-block" class="header">
-            <div class="header-burger">
-                <span></span>
+{% extends "base.html" %}
+{% load static %}
+{% block stylesheets %}
+{% endblock stylesheets %}
+{% block content %}
+<main class="main">
+    <div class="services-table-help-conteiner">
+        <div class="services-table-help-content">
+            <div class="services-table-help-content-image">
+                <img src="{% static 'img/Стандарт.png' %}" alt="">
             </div>
-            <div class="header-button-container">
-                <div class="header-button">
-                    <a href="index.html">Главная</a>
-                </div>
-                <div class="header-button" data-target="link_application">
-                    <a href="application.html">Заказ</a>
-                </div>
+            <div class="services-table-help-content-line"></div>
+            <p class="services-table-help-content-text">Стандартная</p>
+        </div>
+        <div class="services-table-help-content">
+            <div class="services-table-help-content-image">
+                <img src="{% static 'img/Генералка.png' %}" alt="">
             </div>
-            <div class="header-logo">
-                <a href="index.html">
-                    <img src="img/логотип 2.png" alt="">
-                </a>
-                <a href="index.html">
-                    <span>Петербургский клининг</span>
-                </a>
+            <div class="services-table-help-content-line"></div>
+            <p class="services-table-help-content-text">Генеральная</p>
+        </div>
+        <div class="services-table-help-content">
+            <div class="services-table-help-content-image">
+                <img src="{% static 'img/Послестрой.png' %}" alt="">
             </div>
-            <div class="header-button-container">
-                <div class="header-button active_button">
-                    <a href="services.html">Услуги</a>
-                </div>
-                <div class="header-button">
-                    <a href="about.html">О нас</a>
-                </div>
-            </div>
-            <div class="dropdown-content dropdown_user">  
-                <a class="dropdown-element" href="index.html">Главная</a>
-                <a class="dropdown-element" href="services.html">Услуги</a>
-                <a class="dropdown-element" href="application.html">Заказы</a>
-                <a class="dropdown-element-mobile modal_button" data-path="modal_call" href="#">Обратный звонок</a>
-                <a class="dropdown-element-mobile modal_button" data-path="modal_price_path" href="#">Расчет стоимости</a>
-                <a class="dropdown-element" href="about.html">О нас</a>
-            </div>
-        </header>
-        <main class="main">
-            <div class="services-table-help-conteiner">
-                <div class="services-table-help-content">
-                    <div class="services-table-help-content-image">
-                        <img src="img/Стандарт.png" alt="">
-                    </div>
-                    <div class="services-table-help-content-line"></div>
-                    <p class="services-table-help-content-text">Стандартная</p>
-                </div>
-                <div class="services-table-help-content">
-                    <div class="services-table-help-content-image">
-                        <img src="img/Генералка.png" alt="">
-                    </div>
-                    <div class="services-table-help-content-line"></div>
-                    <p class="services-table-help-content-text">Генеральная</p>
-                </div>
-                <div class="services-table-help-content">
-                    <div class="services-table-help-content-image">
-                        <img src="img/Послестрой.png" alt="">
-                    </div>
-                    <div class="services-table-help-content-line"></div>
-                    <p class="services-table-help-content-text">Послестроительная</p>
-                </div>
-            </div>
-
-            <div class="services-table">
-                <h1 class="table-h1">Сравнительный перечень уборок и работ</h1>
-                <div class="table-str table-header-str">
-                    <div class="table-str-text table-str-head-header">Перечень работ</div>
-                    <div class="table-str-text table-header-block">
-                        <p class="table-str-text-header">
-                            <span>Стандартная</span>
-                            <img src="img/Стандарт.png" alt="">
-                        </p>
-                        <p>До 1,8 м от пола</p>
-                    </div>
-                    <div class="table-str-text table-header-block">
-                        <p class="table-str-text-header">
-                            <span>Генеральная</span>
-                            <img src="img/Генералка.png" alt="">
-                        </p>
-                        <p>До 1,8 м от пола</p>
-                    </div>
-                    <div class="table-str-text table-header-block">
-                        <p class="table-str-text-header">
-                            <span>Послестроительная</span>
-                            <img src="img/Послестрой.png" alt="">
-                        </p>
-                        <p>До 1,8 м от пола</p>
-                    </div>
-                </div>
-                <div class="table-str table-str-low">
-                    <div class="table-str-head">
-                        Длительность в часах
-                    </div>
-                    <div class="table-str-text">2-4</div>
-                    <div class="table-str-text">6-8</div>
-                    <div class="table-str-text">6-8</div>
-                </div>
-                <div class="table-str table-str-low">
-                    <div class="table-str-head">
-                        Кол-во сотрудников
-                    </div>
-                    <div class="table-str-text">1-2</div>
-                    <div class="table-str-text">2-4</div>
-                    <div class="table-str-text">2-4</div>
-                </div>
-                <div class="table-str table-str-low">
-                    <div class="table-str-head">
-                        Загрязнения
-                    </div>
-                    <div class="table-str-text">лёгкие</div>
-                    <div class="table-str-text">все</div>
-                    <div class="table-str-text">все</div>
-                </div>
-                <div class="table-str table-last-str">
-                    <div class="table-str-head">
-                        Удаление послестрои-тельных загрянений
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.13281 1.35864L23.1328 23.3586" stroke="#E34A4A" stroke-width="3" />
-                            <path d="M1.13281 23.3586L23.1328 1.35864" stroke="#E34A4A" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.13281 1.35864L23.1328 23.3586" stroke="#E34A4A" stroke-width="3" />
-                            <path d="M1.13281 23.3586L23.1328 1.35864" stroke="#E34A4A" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                </div>
-                <h2 class="table-h2">Комната и коридор</h2>
-                <div class="table-str">
-                    <div class="table-str-head">
-                        Пылесосим, моем пол и плинтусы
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                </div>
-                <div class="table-str">
-                    <div class="table-str-head">
-                        Пылесосим ковры и коврики
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                </div>
-                <div class="table-str">
-                    <div class="table-str-head">
-                        Пылесосим мягкую мебель снаружи
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                </div>
-                <div class="table-str">
-                    <div class="table-str-head">
-                        Пылесосим мягкую мебель внутри
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.13281 1.35864L23.1328 23.3586" stroke="#E34A4A" stroke-width="3" />
-                            <path d="M1.13281 23.3586L23.1328 1.35864" stroke="#E34A4A" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                </div>
-                <div class="table-str">
-                    <div class="table-str-head">
-                        Моем светильники
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                </div>
-                <div class="table-str">
-                    <div class="table-str-head">
-                        Моем трубы и радиаторы
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.13281 1.35864L23.1328 23.3586" stroke="#E34A4A" stroke-width="3" />
-                            <path d="M1.13281 23.3586L23.1328 1.35864" stroke="#E34A4A" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                </div>
-                <div class="table-str">
-                    <div class="table-str-head">
-                        Моем двери и дверные блоки
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                </div>
-                <div class="table-str">
-                    <div class="table-str-head">
-                        Моем все стеклянные поверхности и зеркала
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                </div>
-                <div class="table-str">
-                    <div class="table-str-head">
-                        Удаляем пыль с предметов интерьера
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                </div>
-                <div class="table-str">
-                    <div class="table-str-head">
-                        Моем мебель внутри (если нет вещей)
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.13281 1.35864L23.1328 23.3586" stroke="#E34A4A" stroke-width="3" />
-                            <path d="M1.13281 23.3586L23.1328 1.35864" stroke="#E34A4A" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                </div>
-                <div class="table-str">
-                    <div class="table-str-head">
-                        Удаляем пыль с бытовых приборов
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                </div>
-                <div class="table-str">
-                    <div class="table-str-head">
-                        Меняем постельное бельё
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                </div>
-                <div class="table-str">
-                    <div class="table-str-head">
-                        Моем фасады мебели
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                </div>
-                <div class="table-str">
-                    <div class="table-str-head">
-                        Удаляем пыль с горизонталь-ных поверхностей
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                </div>
-                <div class="table-str">
-                    <div class="table-str-head">
-                        Удаляем пыль с кондиционе-ров и их фильтров
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.13281 1.35864L23.1328 23.3586" stroke="#E34A4A" stroke-width="3" />
-                            <path d="M1.13281 23.3586L23.1328 1.35864" stroke="#E34A4A" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                </div>
-                <div class="table-str">
-                    <div class="table-str-head">
-                        Удаляем пыль со стен и потолков
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.13281 1.35864L23.1328 23.3586" stroke="#E34A4A" stroke-width="3" />
-                            <path d="M1.13281 23.3586L23.1328 1.35864" stroke="#E34A4A" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                </div>
-                <div class="table-str table-last-str">
-                    <div class="table-str-head many-text">
-                        Отодвигаем мебель и моем в труднодоступных местах
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.13281 1.35864L23.1328 23.3586" stroke="#E34A4A" stroke-width="3" />
-                            <path d="M1.13281 23.3586L23.1328 1.35864" stroke="#E34A4A" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                </div>
-                <h2 class="table-h2">Кухня</h2>
-                <div class="table-str">
-                    <div class="table-str-head">
-                        Моем плиту
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                </div>
-                <div class="table-str">
-                    <div class="table-str-head">
-                        Моем столешницу и фартук
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                </div>
-                <div class="table-str">
-                    <div class="table-str-head">
-                        Моем духовку и холодильник снаружи
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                </div>
-                <div class="table-str">
-                    <div class="table-str-head">
-                        Моем духовку и холодильник внутри
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.13281 1.35864L23.1328 23.3586" stroke="#E34A4A" stroke-width="3" />
-                            <path d="M1.13281 23.3586L23.1328 1.35864" stroke="#E34A4A" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                </div>
-                <div class="table-str">
-                    <div class="table-str-head">
-                        Моем вытяжку снаружи
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                </div>
-                <div class="table-str">
-                    <div class="table-str-head">
-                        Моем вытяжку внутри, фильтры
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.13281 1.35864L23.1328 23.3586" stroke="#E34A4A" stroke-width="3" />
-                            <path d="M1.13281 23.3586L23.1328 1.35864" stroke="#E34A4A" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                </div>
-                <div class="table-str">
-                    <div class="table-str-head">
-                        Моем микроволновку внутри и снаружи
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                </div>
-                <div class="table-str">
-                    <div class="table-str-head">
-                        Моем кухонную технику снаружи
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                </div>
-                <div class="table-str">
-                    <div class="table-str-head">
-                        Моем раковину
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                </div>
-                <div class="table-str">
-                    <div class="table-str-head">
-                        Моем посуду
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                </div>
-                <div class="table-str">
-                    <div class="table-str-head">
-                        Выносим мусор и моем корзину
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                </div>
-                <div class="table-str">
-                    <div class="table-str-head">
-                        Моем мебель внутри (если нет вещей)
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.13281 1.35864L23.1328 23.3586" stroke="#E34A4A" stroke-width="3" />
-                            <path d="M1.13281 23.3586L23.1328 1.35864" stroke="#E34A4A" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                </div>
-                <div class="table-str table-last-str">
-                    <div class="table-str-head many-text">
-                        Чистим парогенератором труднодоступные места
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.13281 1.35864L23.1328 23.3586" stroke="#E34A4A" stroke-width="3" />
-                            <path d="M1.13281 23.3586L23.1328 1.35864" stroke="#E34A4A" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                </div>
-                <h2 class="table-h2">Санузел</h2>
-                <div class="table-str">
-                    <div class="table-str-head">
-                        Моем сантехнику
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                </div>
-                <div class="table-str">
-                    <div class="table-str-head">
-                        Моем ванну и душевую кабину
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                </div>
-                <div class="table-str">
-                    <div class="table-str-head">
-                        Моем плитку от локальных загрязнений
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                </div>
-                <div class="table-str">
-                    <div class="table-str-head">
-                        Моем потолок и стены на всю высоту
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.13281 1.35864L23.1328 23.3586" stroke="#E34A4A" stroke-width="3" />
-                            <path d="M1.13281 23.3586L23.1328 1.35864" stroke="#E34A4A" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                </div>
-                <div class="table-str">
-                    <div class="table-str-head">
-                        Моем зеркала
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                </div>
-                <div class="table-str">
-                    <div class="table-str-head">
-                        Удаляем пыль с горизонталь-ных поверхностей
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                </div>
-                <div class="table-str">
-                    <div class="table-str-head">
-                        Моем унитаз, лоток для вантуса
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                </div>
-                <div class="table-str">
-                    <div class="table-str-head">
-                        Очищаем межплиточные швы
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.13281 1.35864L23.1328 23.3586" stroke="#E34A4A" stroke-width="3" />
-                            <path d="M1.13281 23.3586L23.1328 1.35864" stroke="#E34A4A" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                </div>
-                <div class="table-str table-last-str">
-                    <div class="table-str-head many-text">
-                        Чистим парогенератором труднодоступные места
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.13281 1.35864L23.1328 23.3586" stroke="#E34A4A" stroke-width="3" />
-                            <path d="M1.13281 23.3586L23.1328 1.35864" stroke="#E34A4A" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                    <div class="table-str-text">
-                        <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
-                                stroke="#68C049" stroke-width="3" />
-                            <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
-                                stroke="#68C049" stroke-width="3" />
-                        </svg>
-                    </div>
-                </div>
-            </div>
-            <div class="button-up-conteiner">
-                <a href="#header-block" class="button-up">Наверх</a>
-            </div>
-
-        </main>
-        <footer class="footer">
-            <p>
-                roman__turaev@mail.ru +7 (981) 935-83-73
-            </p>
-        </footer>
+            <div class="services-table-help-content-line"></div>
+            <p class="services-table-help-content-text">Послестроительная</p>
+        </div>
     </div>
-    <div class="modals">
-        <div class="modals-overlay">
-            <div class="modal block_call" data-target="modal_call">
-                <div class="block_call-conteiner">
-                    <div class="block_call-left-image">
-                        <img src="img/metla.png" alt="">
-                    </div>
-                    <div class="block_call-input">
-                        <input class="block_call-input-element" type="text" placeholder="Имя">
-                        <input class="block_call-input-element" type="text" placeholder="Телефон">
-                    </div>
-                    <div class="block_call-right-image">
-                        <img src="img/metla.png" alt="">
-                    </div>
-                </div>
-                <div class="block_call-text">
-                    <input id="block_call_input" class="custom-checkbox" type="checkbox">
-                    <label for="block_call_input">
-                        <img class="custom-checkbox-active" src="img/Галочка.svg" alt="">
-                    </label>
-                    <span class="block_call-text-span">Я согласен с <a href="politics.html">политикой обработки персональных данных</a> </span>
-                </div>
-                <div class="block_call-button">
-                    <button>Отправить</button>
-                </div>
+
+    <div class="services-table">
+        <h1 class="table-h1">Сравнительный перечень уборок и работ</h1>
+        <div class="table-str table-header-str">
+            <div class="table-str-text table-str-head-header">Перечень работ</div>
+            <div class="table-str-text table-header-block">
+                <p class="table-str-text-header">
+                    <span>Стандартная</span>
+                    <img src="{% static 'img/Стандарт.png' %}" alt="">
+                </p>
+                <p>До 1,8 м от пола</p>
             </div>
-            <div class="modal" data-target="modal_price_path">
-                <div class="modal_price">
-                    <h1 class="modal_price-sum">
-                        0 ₽
-                    </h1>
-                    <div class="modal_price-square">
-                        <span>Площаль, </span> 
-                        <input type="text" class="modal_price-square-input">
-                        <span>м</span> 
-                    </div>
-                    <div id="form">
-                        <div class="bar">
-                            <div id="m-slider"></div>
-                        </div>
-                    </div>
-
-                    <div class="modal-price-type_selection">
-                        <button>Стандартная</button>
-                        <button>Послестроительная</button>
-                        <button>Генеральная</button>
-                        <button>Мойка окон</button>
-                    </div>
-
-                    <div class="modal-price-add_services">
-                        <button>Холодильник</button>
-                        <button>Внутри кухонных шкафчиков</button>
-                        <button>Вытяжка </button>
-                        <button>
-                            <span class="add_services-text">Стирка</span> 
-                            <div class="add_services-counter">
-                                <div class="add_services-counter-prev"></div>
-                                <div class="add_services-counter-text">
-                                    <span class="add_services-counter-per">1</span>
-                                    загрузка
-                                </div>
-                                <div class="add_services-counter-next"></div>
-                            </div>
-                        </button>
-                        <button>Микроволновка</button>
-                        <button>
-                            <span class="add_services-text">Глажка</span> 
-                            <div class="add_services-counter">
-                                <div class="add_services-counter-prev"></div>
-                                <div class="add_services-counter-text">
-                                    <span class="add_services-counter-per">1</span>
-                                    час
-                                </div>
-                                <div class="add_services-counter-next"></div>
-                        </button>
-                        <button>Духовка</button>
-                        <button>
-                            <span class="add_services-text">Доп. поручения</span> 
-                            <div class="add_services-counter">
-                                <div class="add_services-counter-prev"></div>
-                                <div class="add_services-counter-text">
-                                    <span class="add_services-counter-per">1</span>
-                                    час
-                                </div>
-                                <div class="add_services-counter-next"></div>
-                        </button>
-                    </div>
-
-                    <div class="modal-price-button">
-                        <button id="button-type">Вид уборки</button>
-                        <button id="button-add_services">Доп. услуги</button>
-                    </div>	
-                </div>
-                <div class="modal_price-footer">
-                    <span>На все вопросы ответим: +7 (981) 935-83-73</span>
-                </div>
-                <!-- класс modal_price-button-select активирует кнопку -->
-                <button href="application.html" class="modal_price-button">Заказать</button>
+            <div class="table-str-text table-header-block">
+                <p class="table-str-text-header">
+                    <span>Генеральная</span>
+                    <img src="{% static 'img/Генералка.png' %}" alt="">
+                </p>
+                <p>До 1,8 м от пола</p>
+            </div>
+            <div class="table-str-text table-header-block">
+                <p class="table-str-text-header">
+                    <span>Послестроительная</span>
+                    <img src="{% static 'img/Послестрой.png' %}" alt="">
+                </p>
+                <p>До 1,8 м от пола</p>
+            </div>
+        </div>
+        <div class="table-str table-str-low">
+            <div class="table-str-head">
+                Длительность в часах
+            </div>
+            <div class="table-str-text">2-4</div>
+            <div class="table-str-text">6-8</div>
+            <div class="table-str-text">6-8</div>
+        </div>
+        <div class="table-str table-str-low">
+            <div class="table-str-head">
+                Кол-во сотрудников
+            </div>
+            <div class="table-str-text">1-2</div>
+            <div class="table-str-text">2-4</div>
+            <div class="table-str-text">2-4</div>
+        </div>
+        <div class="table-str table-str-low">
+            <div class="table-str-head">
+                Загрязнения
+            </div>
+            <div class="table-str-text">лёгкие</div>
+            <div class="table-str-text">все</div>
+            <div class="table-str-text">все</div>
+        </div>
+        <div class="table-str table-last-str">
+            <div class="table-str-head">
+                Удаление послестрои-тельных загрянений
+            </div>
+            <div class="table-str-text">
+                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.13281 1.35864L23.1328 23.3586" stroke="#E34A4A" stroke-width="3" />
+                    <path d="M1.13281 23.3586L23.1328 1.35864" stroke="#E34A4A" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.13281 1.35864L23.1328 23.3586" stroke="#E34A4A" stroke-width="3" />
+                    <path d="M1.13281 23.3586L23.1328 1.35864" stroke="#E34A4A" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+        </div>
+        <h2 class="table-h2">Комната и коридор</h2>
+        <div class="table-str">
+            <div class="table-str-head">
+                Пылесосим, моем пол и плинтусы
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+        </div>
+        <div class="table-str">
+            <div class="table-str-head">
+                Пылесосим ковры и коврики
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+        </div>
+        <div class="table-str">
+            <div class="table-str-head">
+                Пылесосим мягкую мебель снаружи
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+        </div>
+        <div class="table-str">
+            <div class="table-str-head">
+                Пылесосим мягкую мебель внутри
+            </div>
+            <div class="table-str-text">
+                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.13281 1.35864L23.1328 23.3586" stroke="#E34A4A" stroke-width="3" />
+                    <path d="M1.13281 23.3586L23.1328 1.35864" stroke="#E34A4A" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+        </div>
+        <div class="table-str">
+            <div class="table-str-head">
+                Моем светильники
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+        </div>
+        <div class="table-str">
+            <div class="table-str-head">
+                Моем трубы и радиаторы
+            </div>
+            <div class="table-str-text">
+                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.13281 1.35864L23.1328 23.3586" stroke="#E34A4A" stroke-width="3" />
+                    <path d="M1.13281 23.3586L23.1328 1.35864" stroke="#E34A4A" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+        </div>
+        <div class="table-str">
+            <div class="table-str-head">
+                Моем двери и дверные блоки
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+        </div>
+        <div class="table-str">
+            <div class="table-str-head">
+                Моем все стеклянные поверхности и зеркала
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+        </div>
+        <div class="table-str">
+            <div class="table-str-head">
+                Удаляем пыль с предметов интерьера
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+        </div>
+        <div class="table-str">
+            <div class="table-str-head">
+                Моем мебель внутри (если нет вещей)
+            </div>
+            <div class="table-str-text">
+                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.13281 1.35864L23.1328 23.3586" stroke="#E34A4A" stroke-width="3" />
+                    <path d="M1.13281 23.3586L23.1328 1.35864" stroke="#E34A4A" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+        </div>
+        <div class="table-str">
+            <div class="table-str-head">
+                Удаляем пыль с бытовых приборов
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+        </div>
+        <div class="table-str">
+            <div class="table-str-head">
+                Меняем постельное бельё
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+        </div>
+        <div class="table-str">
+            <div class="table-str-head">
+                Моем фасады мебели
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+        </div>
+        <div class="table-str">
+            <div class="table-str-head">
+                Удаляем пыль с горизонталь-ных поверхностей
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+        </div>
+        <div class="table-str">
+            <div class="table-str-head">
+                Удаляем пыль с кондиционе-ров и их фильтров
+            </div>
+            <div class="table-str-text">
+                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.13281 1.35864L23.1328 23.3586" stroke="#E34A4A" stroke-width="3" />
+                    <path d="M1.13281 23.3586L23.1328 1.35864" stroke="#E34A4A" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+        </div>
+        <div class="table-str">
+            <div class="table-str-head">
+                Удаляем пыль со стен и потолков
+            </div>
+            <div class="table-str-text">
+                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.13281 1.35864L23.1328 23.3586" stroke="#E34A4A" stroke-width="3" />
+                    <path d="M1.13281 23.3586L23.1328 1.35864" stroke="#E34A4A" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+        </div>
+        <div class="table-str table-last-str">
+            <div class="table-str-head many-text">
+                Отодвигаем мебель и моем в труднодоступных местах
+            </div>
+            <div class="table-str-text">
+                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.13281 1.35864L23.1328 23.3586" stroke="#E34A4A" stroke-width="3" />
+                    <path d="M1.13281 23.3586L23.1328 1.35864" stroke="#E34A4A" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+        </div>
+        <h2 class="table-h2">Кухня</h2>
+        <div class="table-str">
+            <div class="table-str-head">
+                Моем плиту
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+        </div>
+        <div class="table-str">
+            <div class="table-str-head">
+                Моем столешницу и фартук
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+        </div>
+        <div class="table-str">
+            <div class="table-str-head">
+                Моем духовку и холодильник снаружи
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+        </div>
+        <div class="table-str">
+            <div class="table-str-head">
+                Моем духовку и холодильник внутри
+            </div>
+            <div class="table-str-text">
+                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.13281 1.35864L23.1328 23.3586" stroke="#E34A4A" stroke-width="3" />
+                    <path d="M1.13281 23.3586L23.1328 1.35864" stroke="#E34A4A" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+        </div>
+        <div class="table-str">
+            <div class="table-str-head">
+                Моем вытяжку снаружи
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+        </div>
+        <div class="table-str">
+            <div class="table-str-head">
+                Моем вытяжку внутри, фильтры
+            </div>
+            <div class="table-str-text">
+                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.13281 1.35864L23.1328 23.3586" stroke="#E34A4A" stroke-width="3" />
+                    <path d="M1.13281 23.3586L23.1328 1.35864" stroke="#E34A4A" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+        </div>
+        <div class="table-str">
+            <div class="table-str-head">
+                Моем микроволновку внутри и снаружи
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+        </div>
+        <div class="table-str">
+            <div class="table-str-head">
+                Моем кухонную технику снаружи
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+        </div>
+        <div class="table-str">
+            <div class="table-str-head">
+                Моем раковину
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+        </div>
+        <div class="table-str">
+            <div class="table-str-head">
+                Моем посуду
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+        </div>
+        <div class="table-str">
+            <div class="table-str-head">
+                Выносим мусор и моем корзину
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+        </div>
+        <div class="table-str">
+            <div class="table-str-head">
+                Моем мебель внутри (если нет вещей)
+            </div>
+            <div class="table-str-text">
+                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.13281 1.35864L23.1328 23.3586" stroke="#E34A4A" stroke-width="3" />
+                    <path d="M1.13281 23.3586L23.1328 1.35864" stroke="#E34A4A" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+        </div>
+        <div class="table-str table-last-str">
+            <div class="table-str-head many-text">
+                Чистим парогенератором труднодоступные места
+            </div>
+            <div class="table-str-text">
+                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.13281 1.35864L23.1328 23.3586" stroke="#E34A4A" stroke-width="3" />
+                    <path d="M1.13281 23.3586L23.1328 1.35864" stroke="#E34A4A" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+        </div>
+        <h2 class="table-h2">Санузел</h2>
+        <div class="table-str">
+            <div class="table-str-head">
+                Моем сантехнику
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+        </div>
+        <div class="table-str">
+            <div class="table-str-head">
+                Моем ванну и душевую кабину
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+        </div>
+        <div class="table-str">
+            <div class="table-str-head">
+                Моем плитку от локальных загрязнений
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+        </div>
+        <div class="table-str">
+            <div class="table-str-head">
+                Моем потолок и стены на всю высоту
+            </div>
+            <div class="table-str-text">
+                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.13281 1.35864L23.1328 23.3586" stroke="#E34A4A" stroke-width="3" />
+                    <path d="M1.13281 23.3586L23.1328 1.35864" stroke="#E34A4A" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+        </div>
+        <div class="table-str">
+            <div class="table-str-head">
+                Моем зеркала
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+        </div>
+        <div class="table-str">
+            <div class="table-str-head">
+                Удаляем пыль с горизонталь-ных поверхностей
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+        </div>
+        <div class="table-str">
+            <div class="table-str-head">
+                Моем унитаз, лоток для вантуса
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+        </div>
+        <div class="table-str">
+            <div class="table-str-head">
+                Очищаем межплиточные швы
+            </div>
+            <div class="table-str-text">
+                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.13281 1.35864L23.1328 23.3586" stroke="#E34A4A" stroke-width="3" />
+                    <path d="M1.13281 23.3586L23.1328 1.35864" stroke="#E34A4A" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+        </div>
+        <div class="table-str table-last-str">
+            <div class="table-str-head many-text">
+                Чистим парогенератором труднодоступные места
+            </div>
+            <div class="table-str-text">
+                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.13281 1.35864L23.1328 23.3586" stroke="#E34A4A" stroke-width="3" />
+                    <path d="M1.13281 23.3586L23.1328 1.35864" stroke="#E34A4A" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
+            </div>
+            <div class="table-str-text">
+                <svg width="31" height="33" viewBox="0 0 31 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.74374 12.5728V12.5728C5.97722 18.0476 9.49381 24.1611 12.0727 30.5833V30.5833"
+                        stroke="#68C049" stroke-width="3" />
+                    <path d="M11.9985 31.6V31.6C16.646 20.8385 22.5604 10.6697 29.6164 1.30891L29.7427 1.14124"
+                        stroke="#68C049" stroke-width="3" />
+                </svg>
             </div>
         </div>
     </div>
-    
-    <!-- jquery -->
-    <script src="js/jquery-3.6.0.min.js" ></script>
-    <!-- noUiSlider -->
-	<script src="js/nouislider.min.js"></script>
-    <!-- JavaScript -->
-    <script src="js/script.js"></script>
-</body>
+    <div class="button-up-conteiner">
+        <a href="#header-block" class="button-up">Наверх</a>
+    </div>
 
+</main>
+{% endblock content %}
+{% block scripts %}
+{% endblock scripts %}
+</body>
 </html>

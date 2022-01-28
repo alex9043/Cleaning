@@ -5,6 +5,47 @@ function scrollTo(element) {
       behavior: 'smooth'
     })
 }
+let _square = 0;
+let _cleaningType = "";
+let _serviceName = [];
+
+function totalCost({square = _square, cleanType = _cleaningType, servicesName = _serviceName} = {}) {
+    let totalCost = 0;
+    _square = square;
+    _cleaningType = cleanType;
+    // _serviceName = servicesName;
+    let modal_price_sum = document.querySelector('.modal_price-sum').querySelector('span');
+    var serviceCost = new Map();
+    serviceCost.set('Холодильник', 250)
+                .set('Внутри кухонных шкафчиков', 350)
+                .set('Вытяжка', 300)
+                .set('Стирка', 150)
+                .set('Микроволновка', 250)
+                .set('Глажка', 250)
+                .set('Духовка', 450)
+                .set('Доп. поручения', 600);
+    var typeCost = new Map();
+    typeCost.set('Стандартная', 75).set('Послестроительная', 140).set("Генеральная", 125).set('Мойка окон', 250);
+
+    
+
+    if (cleanType != ""){
+        totalCost = parseInt(square) * typeCost.get(cleanType);
+    }
+
+    if(servicesName != []){
+        for (let i = 0; i < servicesName.length; i++){
+            totalCost = totalCost + serviceCost.get(servicesName[i]);
+            console.log("a" + serviceCost.get(servicesName));
+        }
+    }
+
+    // console.log(square);
+    // console.log(cleanType);
+    console.log(servicesName);
+
+    modal_price_sum.innerHTML = totalCost;
+}
 
 //Функции бургера
 $(document).ready(function(){
@@ -20,6 +61,7 @@ $(document).ready(function(){
     $('.dropdown-element-mobile').click(function(event){
         $('.dropdown-content').removeClass('active_burger');
     });
+
 });
 
 // Функции открытия модальных окон
@@ -60,6 +102,9 @@ modalsOverlay.addEventListener('click', (e) => {
 const priceSlider = document.getElementById('m-slider');
 let noUiSlider_values = document.querySelector('.modal_price-square-input');
 
+
+
+
 document.addEventListener("DOMContentLoaded", () =>{
     noUiSlider.create(priceSlider, {
         start: 50,
@@ -84,6 +129,8 @@ document.addEventListener("DOMContentLoaded", () =>{
             density: 20,
         }
     });
+
+    
     priceSlider.noUiSlider.on('update', function (values, handle) {
         noUiSlider_values.value = values[handle];
         if(window.innerWidth > 550){
@@ -100,9 +147,11 @@ document.addEventListener("DOMContentLoaded", () =>{
                 noUiSlider_values.style = 'width: 22px';
             } 
         }
-        
+        totalCost({square: noUiSlider_values.value});
     });
 });
+
+
 
 function input_onchange(e){
     priceSlider.noUiSlider.updateOptions({
@@ -111,6 +160,8 @@ function input_onchange(e){
 }
 
 
+var typeCost = new Map();
+typeCost.set('Стандартная', '75').set('Послестроительная', '140').set('Генеральная', '125').set('Мойка окон', '250');
 
 // функции кнопок открытия блоков в расчете стоимости
 const button_type = document.querySelector('#button-type');
@@ -133,6 +184,7 @@ button_add_services.addEventListener('click', (e) => {
     if(!modal_price_add_services.classList.contains('modal_price-button-active')){
         modal_price_add_services.classList.add('modal_price-button-active');
         button_add_services.classList.add('button-type-active');
+
     }else{
         modal_price_add_services.classList.remove('modal_price-button-active');
         button_add_services.classList.remove('button-type-active');
@@ -163,30 +215,59 @@ let menu_button_type_list = menu_button_type.querySelectorAll('button');
 menu_button_type_list.forEach((el) =>{
     el.addEventListener('click', (e) => {
         menu_button_type_list.forEach((el) =>{
-            if(el.classList.contains('type_selection-active')) el.classList.remove('type_selection-active');
+            if(el.classList.contains('type_selection-active')) {
+            el.classList.remove('type_selection-active');
+            }
         });
         e.target.classList.add('type_selection-active');
         button_type.innerHTML = el.innerHTML;
         if(el.innerHTML == "Послестроительная"){
             document.getElementById('button-type').style = "min-width: 137px;";
+            console.log(button_type.textContent);
+            
         }else{
             document.getElementById('button-type').style = "min-width: 0px;";
+            console.log(button_type.textContent);
         }
         modal_price_button.classList.add('modal_price-button-select');  
+        totalCost({cleanType: el.textContent});
     });
-})
+});
 
 
 let modal_price_add_services_list = modal_price_add_services.querySelectorAll('button');
+
+var serviceCost = new Map();
+serviceCost.set('Холодильник', '250').set('Внутри кухонных шкафчиков', '350').set('Вытяжка', '300').set('Стирка', '150').set('Микроволновка', '250').set('Глажка', '250').set('Духовка', '450').set('Доп. поручения', '600');
 
 modal_price_add_services_list.forEach((el) =>{
     el.addEventListener('click', (e) => {
         if(e.target.classList.contains('type_selection-active') || e.target == el.querySelector('.add_services-counter-text')){
             el.classList.remove('type_selection-active');
+            console.log(el);
+            
+            // if(!el.querySelector('.add_services-counter-text')){
+            //     modal_price_sum.innerHTML = parseInt(modal_price_sum.textContent) - parseInt(serviceCost.get(el.textContent));
+            // } else {
+            //     modal_price_sum.innerHTML = parseInt(modal_price_sum.textContent) - parseInt(serviceCost.get(el.querySelector(".add_services-text").textContent));
+            // } !!!!!!!!!!!!!!!!!!!
+            var index = _serviceName.indexOf(el.textContent);
+            _serviceName.splice(index, 1);
+            totalCost();
         }
         else{
             el.classList.add('type_selection-active');
+            console.log(el);
+
+            // if(!el.querySelector('.add_services-counter-text')){
+            //     modal_price_sum.innerHTML = parseInt(modal_price_sum.textContent) + parseInt(serviceCost.get(el.textContent));
+            // } else {
+            //     modal_price_sum.innerHTML = parseInt(modal_price_sum.textContent) + parseInt(serviceCost.get(el.querySelector(".add_services-text").textContent));
+            // } !!!!!!!!!!!!!!!!!!!!!!!
+            _serviceName.push(el.textContent);
+            totalCost();
         }
+        totalCost({servicesName: el.textContent});
     });
 })
 
@@ -199,6 +280,8 @@ services_button_next.forEach((el) =>{
   el.addEventListener('click', (e) =>{
     const counter_per = e.target.parentNode.querySelector('.add_services-counter-per');
     counter_per.innerHTML =  parseInt(counter_per.innerHTML) + 1;
+    
+    // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!modal_price_sum.innerHTML = parseInt(modal_price_sum.textContent) + parseInt(serviceCost.get(e.target.parentNode.querySelector('.type_selection-active').querySelector('.add_services-text').textContent));
   }); 
 });
 
@@ -207,5 +290,6 @@ services_button_prev.forEach((el) =>{
     const counter_per = e.target.parentNode.querySelector('.add_services-counter-per');
     if(counter_per.innerHTML > 1)
       counter_per.innerHTML =  parseInt(counter_per.innerHTML) - 1;
+    //   !!!!!!!!!!!!!!!!modal_price_sum.innerHTML = parseInt(modal_price_sum.textContent) - parseInt(serviceCost.get(e.target.parentNode.querySelector('.type_selection-active').querySelector('.add_services-text').textContent));
   }); 
 });

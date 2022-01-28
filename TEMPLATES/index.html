@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/> -->
 {% endblock stylesheets %}
 {% block content %}
-	<div id="page-preloader" class="preloader">
+	<!-- <div id="page-preloader" class="preloader">
 		<div class="preloader-logo">
 			<img id="preloader-logo-image" src="{% static 'img/логотип 1.png' %}" alt="">
 		</div>
@@ -15,7 +15,7 @@
 			<p class="preloader-text-top done">Чистота</p>
 			<p class="preloader-text-bot done">Это просто</p>
 		</div>
-	</div>
+	</div> -->
 
 	<main class="main">
 		<div id="first_screen-id" class="first_screen">
@@ -325,8 +325,8 @@
 						</li>
 					</ul>
 					<div class="contact_screen-content-info-button">
-						<a href="application.html" class="button_zakaz">заказ</a>
-						<a href="services.html" class="button_services">услуги</a>
+						<a href="/order" class="button_zakaz">заказ</a>
+						<a href="/services" class="button_services">услуги</a>
 					</div>
 				</div>
 			</div>
@@ -366,5 +366,5 @@
 	<!-- Swiper JS
 	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
 
-	<script src="{% static 'js/preloader.js' %}"></script>
+	<!-- <script src="{% static 'js/preloader.js' %}"></script> -->
 {% endblock scripts %}

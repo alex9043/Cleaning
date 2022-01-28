@@ -28,12 +28,38 @@ def order(request):
             dateTime = "{0}-{1}-{2} {3}".format(datetime.now().year, monthNum, day, time), 
             User = User.objects.get(phone = phone),
             totalPrice = 0, 
-            status = Status.objects.get(name = "Получен"), 
+            # status = Status.objects.get(name = "Получен"), 
         )
+        order.save()
+        totalPrice = ServInOrder(order, serviceName, serviceNumber)
+        # if
+        totalPrice = int(CleaningType.objects.get(name = cleaningType).price) * int(area) + totalPrice
+        order.totalPrice = totalPrice
         order.save()
         # return HttpResponse("<h2>cleaningType = {0}</h2><h2>area = {1}</h2><h2>serviceName = {2}</h2><h2>serviceNumber = {3}</h2><h2>day = {4}</h2><h2>time = {5}</h2><h2>firstName = {6}</h2><h2>secondName = {7}</h2><h2>phone = {8}</h2><h2>email = {9}</h2><h2>address = {10}</h2>".format(cleaningType, area, serviceName, serviceNumber, date, time, firstName, secondName, phone, email, address))
         return HttpResponseRedirect("/order")
     else:
         orderform = OrderForm()
-        return render(request, "pages/order_test.html", {"form": orderform})
+        return render(request, "pages/order.html", {"form": orderform})
     # return render(request, "pages/application.html")
+
+def ServInOrder(order, serviceName, serviceNumber):
+    i = 0
+    totalPrice = 0
+    while(i < len(serviceName)):
+        if serviceName[i] == "":
+            pass
+        else:
+            servInOrder = ServicesInOrder(
+                Order = Order.objects.get(id = order.id),
+                Service = Service.objects.get(name = serviceName[i]),
+                number = serviceNumber[i]
+            )
+            servInOrder.save()
+            if int(serviceNumber[i]) > 0:
+                totalPrice = totalPrice + int(Service.objects.get(name = serviceName[i]).price) * int(serviceNumber[i])
+            else:
+                totalPrice = totalPrice + int(Service.objects.get(name = serviceName[i]).price)
+        i = i + 1
+    print(totalPrice)
+    return totalPrice
